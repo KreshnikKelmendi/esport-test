@@ -1,0 +1,42 @@
+'use client';
+
+import { useParams } from 'next/navigation';
+import HomePage from '../components/view/HomePage';
+import AboutPage from '../components/view/AboutPage';
+import BlogPage from '../components/view/BlogPage';
+import Pristina from '../components/view/Pristina';
+import ContactPage from '../components/view/ContactPage';
+import AboutEvent from '../components/view/AboutEvent';
+import SponsorsPage from '../components/view/SponsorsPage';
+
+
+
+export default function DynamicPage() {
+  const { slug } = useParams();
+
+  const pageComponents: Record<string, React.ReactNode> = {
+    'home': <HomePage />,
+    'about-fesk': <AboutPage />,
+    'about-event': <AboutEvent />,
+    'news': <BlogPage />,
+    'what-to-visit-in-Pristina': <Pristina  />,
+    'sponsors': <SponsorsPage   />,
+  
+  };
+
+  const PageComponent = pageComponents[slug as string];
+
+  if (!PageComponent) {
+    return (
+      <div className="text-center py-20">
+        <h1 className="text-4xl font-bold">404 - Page Not Found</h1>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      {PageComponent}
+    </div>
+  );
+}
