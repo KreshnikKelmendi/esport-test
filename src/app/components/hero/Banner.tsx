@@ -17,13 +17,7 @@ const Banner: React.FC = () => {
         rootMargin: '-50px 0px',
     });
 
-    const titles = [
-        "Global Esports Showdown",
-        "European Esports Championship 2025"
-    ];
-
-    
-
+  
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
         visible: {
