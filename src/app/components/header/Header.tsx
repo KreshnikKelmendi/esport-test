@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { FaBars, FaTimes, FaFacebookF, FaInstagram, FaTwitch, FaChevronDown } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -188,10 +189,12 @@ const Header = () => {
             >
               <div className="flex justify-between items-center p-6 border-b border-white/10">
                 <Link href="/" onClick={closeAllDropdowns}>
-                  <img
+                  <Image
                     src="/assets/logo/ESPORTS-LOGO.png"
                     alt="Logo"
                     className="h-10"
+                    width={'100'}
+                    height={'100'}
                   />
                 </Link>
                 <button

@@ -3,6 +3,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import Image from "next/image";
 
 const Sponsor = () => {
   const mainPartners = [
@@ -118,12 +119,14 @@ const Sponsor = () => {
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <img
+                <Image
                   src={logo}
                   alt="Main partner logo"
                   className="w-full h-full object-contain object-center p-2"
                   draggable="false"
                   loading="lazy"
+                  width={'300'}
+                  height={'300'}
                 />
               </motion.div>
             ))}
@@ -161,12 +164,14 @@ const Sponsor = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="w-full h-full p-2 lg:p-4 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
-                    <img
+                    <Image
                       src={logo}
                       alt="Sponsor logo"
                       className="w-full h-full object-contain object-center"
                       draggable="false"
                       loading="lazy"
+                      width={'300'}
+                      height={'300'}
                     />
                   </div>
                 </motion.div>
@@ -206,12 +211,14 @@ const Sponsor = () => {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <div className="w-full h-full p-2 lg:p-4 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
-                    <img
+                    <Image
                       src={logo}
                       alt="Sponsor logo"
                       className="w-full h-full object-contain object-center"
                       draggable="false"
                       loading="lazy"
+                      width={'300'}
+                      height={'300'}
                     />
                   </div>
                 </motion.div>

@@ -89,8 +89,8 @@ const Visit = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-base md:text-base mb-6 font-britanica-regular"
           >
-            Experience the perfect blend of nature and comfort in our stunning location.
-            Whether you're looking for adventure or relaxation, we have something for everyone.
+            Experience the perfect blend of nature and comfort in our stunning location. 
+            Whether you&apos;re looking for adventure or relaxation, we&apos;ve got something for everyone.
           </motion.p>
 
           <motion.p

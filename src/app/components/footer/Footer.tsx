@@ -6,6 +6,7 @@ import { FiPhoneCall } from "react-icons/fi";
 import { HiLocationMarker } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { FaX } from "react-icons/fa6";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -81,10 +82,13 @@ const Footer = () => {
             className="space-y-6"
           >
             <div className="relative group">
-              <img
+              <Image
                 src="/assets/logo/ESPORTS-LOGO.png"
                 alt="Esports Logo"
                 className="w-[30vh] transition-all duration-700 group-hover:brightness-110"
+                width={'300'}
+                height={'300'}
+
               />
               <div className="absolute -bottom-4 left-0 h-1 bg-gradient-to-r from-[#050219] to-[#5E65EF] w-0 group-hover:w-full transition-all duration-1000"></div>
             </div>

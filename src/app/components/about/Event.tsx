@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
+import Image from 'next/image';
 
 
 const Event = () => {
@@ -27,14 +28,6 @@ const Event = () => {
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1]
             }
-        }
-    };
-
-    const fadeIn = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: { duration: 0.8 }
         }
     };
 
@@ -181,10 +174,12 @@ const Event = () => {
                                 whileHover={{ scale: 1 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <img
+                                <Image
                                     src="/assets/about/arena2.jpg"
                                     alt="Stadium"
                                     className="w-full h-full object-cover"
+                                    width={'1000'}
+                                    height={'1000'}
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                                 <div className="absolute bottom-4 left-4">

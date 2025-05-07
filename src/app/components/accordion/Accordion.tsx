@@ -1,5 +1,5 @@
 "use client";
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 
@@ -8,7 +8,7 @@ const Accordion = () => {
   const ref = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const isTextInView = useInView(textRef, { once: true, margin: "-50px" });
+ 
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -61,22 +61,7 @@ const Accordion = () => {
     }
   };
 
-  const textVariants = {
-    hidden: { 
-      scale: 1.2,
-      opacity: 0,
-      y: 20
-    },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1]
-      }
-    }
-  };
+
 
   return (
     <motion.div 

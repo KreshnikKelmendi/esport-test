@@ -5,6 +5,8 @@ import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaCalendarAlt, FaMapMarkerAlt, FaTrophy, FaGamepad, FaUsers } from 'react-icons/fa';
 import { SiCounterstrike, SiDota2 } from 'react-icons/si';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const SecondBanner: React.FC = () => {
     const [currentImage, setCurrentImage] = useState(0);
@@ -138,13 +140,13 @@ const SecondBanner: React.FC = () => {
 
                         {/* Star logos */}
                         <div className="absolute top-24 right-16 ">
-                            <img src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" />
+                            <Image src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" width={'100'} height={'100'} />
                         </div>
                         <div className="absolute top-60 lg:top-44 left-1/2 lg:left-16 opacity-25">
-                            <img src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" />
+                            <Image src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" width={'100'} height={'100'} />
                         </div>
                         <div className="absolute lg:top-1/2 bottom-[55vh] lg:bottom-1/2 right-1/2 transform translate-x-1/2 translate-y-1/2">
-                            <img src="/assets/banner/STAR.png" alt="Logo" className="w-[14ch] animate-pulse" />
+                            <Image src="/assets/banner/STAR.png" alt="Logo" className="w-[14ch] animate-pulse" width={'100'} height={'100'} />
                         </div>
 
                         <motion.p
@@ -159,7 +161,7 @@ const SecondBanner: React.FC = () => {
                             variants={itemVariants}
                         >
                             Step into the spotlight at one of the most electrifying esports events of the decade. Experience intense competition,
-                            global talent, and state-of-the-art gaming in a city that's ready to make history.
+                            global talent, and state-of-the-art gaming in a city that&apos;s ready to make history.
                         </motion.p>
 
                         <motion.div
@@ -217,12 +219,12 @@ const SecondBanner: React.FC = () => {
                         </motion.div>
 
                         <motion.div className="pt-4" variants={itemVariants}>
-                            <a
+                            <Link
                                 href="/#"
                                 className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg font-britanica outline text-black rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white"
                             >
                                 Learn More
-                            </a>
+                            </Link>
                         </motion.div>
                     </div>
 

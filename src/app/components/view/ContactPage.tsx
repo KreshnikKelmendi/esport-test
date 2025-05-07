@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FiMail, FiMapPin } from 'react-icons/fi';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 

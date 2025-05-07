@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { blogPosts } from '../data-blog/blog';
+import { BlogPost, blogPosts } from '../data-blog/blog';
+import Image from 'next/image';
 
 const GridBlog = () => {
     const [viewMode, setViewMode] = useState<'grid' | 'portrait'>('grid');
@@ -42,8 +43,9 @@ const GridBlog = () => {
                             Championship <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB600] to-[#3703FF]">News</span>
                         </h2>
                         <p className="text-lg text-black max-w-3xl font-britanica-regular">
-                            The latest news, highlights, and insights from Europe's premier esports competition
+                            The latest news, highlights, and insights from Europe&apos;s premier esports competition
                         </p>
+
 
                         {/* View mode toggle */}
                         <div className="hidden lg:flex justify-end mt-6">
@@ -76,10 +78,12 @@ const GridBlog = () => {
                                 <article key={post.id} className="group relative overflow-hidden rounded-2xl transition-all duration-300 ">
                                     {/* Image with gradient overlay */}
                                     <div className="relative lg:h-64 2xl:h-80 overflow-hidden rounded-t-2xl font-britanica-regular">
-                                        <img
+                                        <Image
                                             src={post.imageUrl}
                                             alt={post.title}
                                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                            width={'500'}
+                                            height={'300'}
                                         />
                                         <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#050219] opacity-100`}></div>
 
@@ -117,15 +121,17 @@ const GridBlog = () => {
                         </div>
                     ) : (
                         <div className="space-y-6">
-                            {currentPosts.map((post: any) => (
+                            {currentPosts.map((post: BlogPost) => (
                                 <article key={post.id} className="group relative overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/10 bg-gradient-to-r from-[#0a0829] to-[#4e5bfc] backdrop-blur-sm">
                                     <div className="flex flex-col md:flex-row justify-center items-center">
                                         {/* Image with gradient overlay */}
                                         <div className="relative md:w-1/3 lg:h-64 2xl:h-80 overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none">
-                                            <img
+                                            <Image
                                                 src={post.imageUrl}
                                                 alt={post.title}
                                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                                width={'500'}
+                                                height={'300'}
                                             />
                                             <div className={`absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-90`}></div>
 
@@ -273,7 +279,7 @@ const GridBlog = () => {
                         </h3>
 
                         <div className="space-y-4">
-                            {blogPosts.slice(0, 3).map((post: any) => (
+                            {blogPosts.slice(0, 3).map((post: BlogPost) => (
                                 <a key={post.id} href="#" className="group flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
                                     <div className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden">
                                         <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" />

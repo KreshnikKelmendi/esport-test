@@ -1,4 +1,16 @@
-const blogPosts: any = [
+// Define the BlogPost type interface
+export interface BlogPost {
+    id: number;
+    title: string;
+    date: string;
+    category: string;
+    imageUrl: string;
+    content: string[];
+    accentColor: string;
+  }
+  
+  // Define the blogPosts array with the BlogPost type
+  export const blogPosts: BlogPost[] = [
     {
       id: 1,
       title: "2023 European Esports Championship: The Ultimate Showdown",
@@ -78,18 +90,17 @@ const blogPosts: any = [
       accentColor: "from-purple-500 to-pink-500"
     },
     {
-        id: 7,
-        title: "Fan Experience: More Than Just Watching Games",
-        date: "April 3, 2025",
-        category: "Event Coverage",
-        imageUrl: "/assets/blog/blog-3.JPG",
-        content: [
-          "The championship offered fans unprecedented access to players and exclusive content.",
-          "Virtual meet-and-greets, AR photo ops, and interactive exhibits kept attendees engaged between matches.",
-          "Organizers share how they created a festival atmosphere that appealed to both hardcore and casual fans."
-        ],
-        accentColor: "from-purple-500 to-pink-500"
-      }
+      id: 7,
+      title: "Fan Experience: More Than Just Watching Games",
+      date: "April 3, 2025",
+      category: "Event Coverage",
+      imageUrl: "/assets/blog/blog-3.JPG",
+      content: [
+        "The championship offered fans unprecedented access to players and exclusive content.",
+        "Virtual meet-and-greets, AR photo ops, and interactive exhibits kept attendees engaged between matches.",
+        "Organizers share how they created a festival atmosphere that appealed to both hardcore and casual fans."
+      ],
+      accentColor: "from-purple-500 to-pink-500"
+    }
   ];
-
-  export { blogPosts}
+  

@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header/Header';
-import Link from 'next/link';
-import { FaArrowCircleDown } from 'react-icons/fa';
 import Countdown from './CountDown';
+import Image from 'next/image';
+import Link from 'next/link';
 
 
 const Banner: React.FC = () => {
@@ -56,28 +56,6 @@ const Banner: React.FC = () => {
         }
     };
 
-    const textSlideUpVariants: Variants = {
-        hidden: {
-            y: 80,
-            opacity: 0,
-        },
-        visible: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 0.8,
-                ease: [0.2, 0.65, 0.3, 0.9],
-            }
-        },
-        exit: {
-            y: -80,
-            opacity: 0,
-            transition: {
-                duration: 0.6,
-                ease: "easeIn"
-            }
-        }
-    };
 
     const generateStars = () => {
         const stars = [];
@@ -136,23 +114,23 @@ const Banner: React.FC = () => {
                         {/* Text Section */}
                         <div className="w-full lg:w-full space-y-6 md:space-y-8">
                             <div className="absolute top-24 right-16 ">
-                                <img src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" />
+                                <Image src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" width={'100'} height={'100'} />
                             </div>
 
                             <div className="absolute top-60 lg:top-44 left-1/2 lg:left-16 opacity-25">
-                                <img src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" />
+                                <Image src="/assets/banner/STAR.png" alt="Logo" className="w-[8ch] animate-pulse" width={'100'} height={'100'} />
                             </div>
 
                             <div className="absolute lg:top-1/2 bottom-[55vh] lg:bottom-[40px] right-1/2 transform translate-x-1/2">
-                                <img src="/assets/banner/STAR.png" alt="Logo" className="w-[14ch] lg:w-[20ch] animate-pulse" />
+                                <Image src="/assets/banner/STAR.png" alt="Logo" className="w-[14ch] lg:w-[20ch] animate-pulse" width={'100'} height={'100'} />
                             </div>
 
                             <div className="absolute lg:top-1/2 top-[15vh] lg:bottom-1/2">
-                                <img src="/assets/banner/DOTA-2.png" alt="Logo" className="w-[20ch] lg:w-[28ch] animate-pulse" />
+                                <Image src="/assets/banner/DOTA-2.png" alt="Logo" className="w-[20ch] lg:w-[28ch] animate-pulse" width={'100'} height={'100'} />
                             </div>
 
                             <div className="absolute lg:top-40 bottom-[5vh] lg:bottom-1/2 right-7">
-                                <img src="/assets/banner/CS2.png" alt="Logo" className="w-[24ch] lg:w-[32ch] animate-pulse" />
+                                <Image src="/assets/banner/CS2.png" alt="Logo" className="w-[24ch] lg:w-[32ch] animate-pulse" width={'100'} height={'100'} />
                             </div>
 
                             <div className="flex items-center justify-center min-h-[200px] px-4">
@@ -182,7 +160,7 @@ const Banner: React.FC = () => {
                             </div>
                           
                             <motion.div className="absolute bottom-[10vh] left-1/2 transform -translate-x-1/2"  variants={itemVariants}>
-                                <a
+                                <Link
                                     href="/#"
                                     className="inline-block animate-bounce px-8 py-3 md:px-10 md:py-4 text-lg font-britanica text-white rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105 hover:shadow-blue-500/30"
                                 >
@@ -190,7 +168,7 @@ const Banner: React.FC = () => {
                                         <path d="M23.7341 0.459351L21.2594 0.470141L18.5376 0.482509L16.4179 0.486053L13.1045 0.49721L9.503 0.510197L6.44686 0.519714L4.00296 0.530307L2.03241 0.537887L0.000119504 0.54586L11.8225 12.0052L23.7341 0.459351Z" fill="white" />
                                     </svg>
 
-                                </a>
+                                </Link>
                             </motion.div>
                         </div>
                     </motion.div>
