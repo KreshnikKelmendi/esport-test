@@ -6,7 +6,6 @@ import { useInView } from 'framer-motion';
 const Accordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const ref = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLParagraphElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
  
 

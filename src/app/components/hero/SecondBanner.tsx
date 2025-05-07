@@ -44,13 +44,14 @@ const SecondBanner: React.FC = () => {
 
     useEffect(() => {
         if (!inView) return;
-
+    
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
         }, 4000);
-
+    
         return () => clearInterval(interval);
-    }, [inView]);
+    }, [inView, images.length]);
+    
 
     const containerVariants: Variants = {
         hidden: { opacity: 0 },

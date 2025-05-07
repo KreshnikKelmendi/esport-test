@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Header from '../header/Header';
@@ -10,7 +10,7 @@ import Link from 'next/link';
 
 
 const Banner: React.FC = () => {
-    const [currentTitle, setCurrentTitle] = useState(0);
+  
     const [ref, inView] = useInView({
         triggerOnce: false,
         threshold: 0.2,
@@ -22,15 +22,7 @@ const Banner: React.FC = () => {
         "European Esports Championship 2025"
     ];
 
-    useEffect(() => {
-        if (!inView) return;
-
-        const interval = setInterval(() => {
-            setCurrentTitle((prev) => (prev + 1) % titles.length);
-        }, 4000);
-
-        return () => clearInterval(interval);
-    }, [inView]);
+    
 
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -135,25 +127,7 @@ const Banner: React.FC = () => {
 
                             <div className="flex items-center justify-center min-h-[200px] px-4">
                                 <AnimatePresence mode="wait">
-                                    {/* <motion.div
-                                        key={currentTitle}
-                                        className="relative"
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                        variants={textSlideUpVariants}
-                                    >
-                                        <motion.p
-                                            className="text-2xl sm:text-5xl md:text-6xl lg:text-5xl 2xl:text-7xl font-britanica z-50 font-bold uppercase tracking-[6px] text-blue-600 leading-tight"
-                                        >
-                                            {titles[currentTitle].split(" ").map((word, index) => (
-                                                <span key={index} className="block">
-                                                    {word}
-                                                </span>
-                                            ))}
-                                        </motion.p>
-                                      
-                                    </motion.div> */}
+                                  
                                       <Countdown />
                                 </AnimatePresence>
                             

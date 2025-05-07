@@ -74,7 +74,7 @@ const GridBlog = () => {
 
                     {viewMode === 'grid' ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {currentPosts.map((post: any) => (
+                            {currentPosts.map((post: BlogPost) => (
                                 <article key={post.id} className="group relative overflow-hidden rounded-2xl transition-all duration-300 ">
                                     {/* Image with gradient overlay */}
                                     <div className="relative lg:h-64 2xl:h-80 overflow-hidden rounded-t-2xl font-britanica-regular">
@@ -282,7 +282,7 @@ const GridBlog = () => {
                             {blogPosts.slice(0, 3).map((post: BlogPost) => (
                                 <a key={post.id} href="#" className="group flex items-start space-x-3 hover:bg-gray-800/50 p-2 rounded-lg transition-colors">
                                     <div className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden">
-                                        <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" />
+                                        <Image src={post.imageUrl} alt={post.title} className="w-full h-full object-cover" width={'300'} height={'300'} />
                                     </div>
                                     <div>
                                         <h4 className="text-sm font-medium text-white group-hover:text-blue-400 transition-colors">{post.title}</h4>
