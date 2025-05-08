@@ -116,9 +116,9 @@ const BlogHome = () => {
                   </div>
                 </Link>
                 {/* Title with Link */}
-                <Link href={`/news/${post.id}`}>
+                <Link href={`/blog/${post.id}`}>
                   <div className="p-4">
-                    <h3 className="text-black text-lg font-britanica">
+                    <h3 className="text-black text-lg font-britanica hover:text-[#3703FF] transition-all duration-300">
                       {post.title}
                     </h3>
                   </div>

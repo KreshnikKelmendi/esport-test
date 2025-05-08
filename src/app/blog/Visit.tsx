@@ -8,10 +8,10 @@ import Link from 'next/link';
 const Visit = () => {
   const imagePaths = [
     '/assets/pristina/pristina-1.png',
-    '/assets/pristina/pristina-2.png',
+    '/assets/pristina/newborn.png',
     '/assets/pristina/pristina-3.png',
     '/assets/pristina/pristina-4.png',
-    '/assets/pristina/pristina-5.png',
+    '/assets/pristina/prishtina-5.png',
     '/assets/pristina/pristina-6.png',
     '/assets/pristina/pristina-7.png',
     '/assets/pristina/pristina-8.png',

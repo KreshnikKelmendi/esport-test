@@ -186,21 +186,18 @@ const Footer = () => {
               </li>
             </ul>
           </motion.div>
-
-          {/* Newsletter */}
-
         </div>
 
 
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0 font-britanica-regular">
-            &copy; EUROPEAN ESPORTS CHAMPIONSHIP 2025.
+        <div className="flex flex-col md:flex-row justify-between lg:items-center border-t border-gray-800 pt-8 mt-12">
+          <p className="text-gray-500 text-[12px] mb-4 md:mb-0 font-britanica-regular">
+            &copy; European Esports Championship 2025. All rights reserved.
           </p>
-          <div className="lg:flex space-x-6 font-britanica-regular hidden">
-            <p className="text-gray-500 text-sm mb-4 md:mb-0 font-britanica-regular">
-              All rights reserved.
+          <div className="lg:flex space-x-6 font-britanica-regular ">
+            <p className="text-gray-500 text-[12px]  md:mb-0 font-britanica-regular">
+              Developed by Trekuartista
             </p>
           </div>
         </div>

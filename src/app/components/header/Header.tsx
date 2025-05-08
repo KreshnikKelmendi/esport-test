@@ -190,14 +190,14 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-              className="fixed inset-y-0 right-0 w-full max-w-sm bg-gradient-to-b from-[#0a0829] to-[#1a1466] shadow-xl z-40 overflow-y-auto"
+              className="fixed inset-y-0 right-0 w-full max-w-sm bg-gradient-to-r from-[#0a0829] to-[#050219] shadow-xl z-40 overflow-y-auto"
             >
               <div className="flex justify-between items-center p-6 border-b border-white/10">
                 <Link href="/" onClick={closeAllDropdowns}>
                   <Image
                     src="/assets/logo/ESPORTS-LOGO.png"
                     alt="Logo"
-                    className="h-10"
+                    className=" object-cover"
                     width={'100'}
                     height={'100'}
                   />
@@ -210,8 +210,8 @@ const Header = () => {
                 </button>
               </div>
 
-              <nav className="p-6">
-                <ul className="space-y-4">
+              <nav className="px-4 py-16">
+                <ul className="space-y-6">
                   {menuItems.map((item) => (
                     <li key={item.id}>
                       {item.subItems ? (
@@ -222,7 +222,7 @@ const Header = () => {
                               ${activeDropdown === item.id ? 'bg-white/10 text-white' : 'text-white/90 hover:bg-white/5'}
                             `}
                           >
-                            <span className="font-medium">{item.label}</span>
+                            <span className="font-britanica text-2xl">{item.label}</span>
                             <motion.span
                               animate={{ rotate: activeDropdown === item.id ? 180 : 0 }}
                               transition={{ duration: 0.2 }}
@@ -244,7 +244,7 @@ const Header = () => {
                                   <li key={subItem.id} className="my-1">
                                     <Link
                                       href={subItem.href}
-                                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-colors"
+                                      className="block px-4 py-3 text-white/80 hover:text-white hover:bg-white/5 rounded-lg font-britanica transition-colors"
                                       onClick={closeAllDropdowns}
                                     >
                                       {subItem.label}
@@ -258,7 +258,7 @@ const Header = () => {
                       ) : (
                         <Link
                           href={item.href}
-                          className={`block px-4 py-3 rounded-lg font-medium transition-colors
+                          className={`block px-4 py-3 text-2xl rounded-lg font-britanica transition-colors
                             ${pathname === item.href ? 'bg-white/10 text-white' : 'text-white/90 hover:bg-white/5'}
                           `}
                           onClick={closeAllDropdowns}
@@ -272,27 +272,27 @@ const Header = () => {
               </nav>
 
               <div className="p-6 border-t border-white/10">
-                <div className="flex justify-center space-x-6">
+                <div className="flex justify-center items-end h-fit space-x-8 pt-16">
                   <motion.a 
                     href="#" 
                     className="text-white/80 hover:text-blue-400 transition-colors"
                     whileHover={{ y: -2 }}
                   >
-                    <FaFacebookF size={18} />
+                    <FaFacebookF size={24} />
                   </motion.a>
                   <motion.a 
                     href="#" 
                     className="text-white/80 hover:text-pink-500 transition-colors"
                     whileHover={{ y: -2 }}
                   >
-                    <FaInstagram size={18} />
+                    <FaInstagram size={24} />
                   </motion.a>
                   <motion.a 
                     href="#" 
                     className="text-white/80 hover:text-purple-500 transition-colors"
                     whileHover={{ y: -2 }}
                   >
-                    <FaTwitch size={18} />
+                    <FaTwitch size={24} />
                   </motion.a>
                 </div>
               </div>

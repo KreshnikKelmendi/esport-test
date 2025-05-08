@@ -44,14 +44,14 @@ const SecondBanner: React.FC = () => {
 
     useEffect(() => {
         if (!inView) return;
-    
+
         const interval = setInterval(() => {
             setCurrentImage((prev) => (prev + 1) % images.length);
         }, 4000);
-    
+
         return () => clearInterval(interval);
     }, [inView, images.length]);
-    
+
 
     const containerVariants: Variants = {
         hidden: { opacity: 0 },
@@ -136,7 +136,20 @@ const SecondBanner: React.FC = () => {
                             className="text-base md:text-xl text-black tracking-[1.5px] font-britanica"
                             variants={itemVariants}
                         >
-                            Pristina, Kosovo — Summer 2025
+                            Pristina, Kosovo <br /> 
+                            <motion.span
+                                animate={{
+                                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                                }}
+                                transition={{
+                                    duration: 5,
+                                    ease: 'linear',
+                                    repeat: Infinity,
+                                }}
+                                className="inline-block text-transparent bg-clip-text text-2xl bg-gradient-to-r from-[#5E65EF] via-[#FFB600] to-[#050219] bg-[length:200%_200%] bg-[position:0%_50%]"
+                            >
+                                09 - 13 July 2025
+                            </motion.span>
                         </motion.h6>
 
                         {/* Star logos */}
@@ -151,7 +164,7 @@ const SecondBanner: React.FC = () => {
                         </div>
 
                         <motion.p
-                            className="text-2xl lg:text-3xl font-britanica font-bold uppercase tracking-[3px] text-blue-600"
+                            className="text-2xl lg:text-3xl font-britanica font-bold uppercase tracking-[3px] text-[#3703FF]"
                             variants={itemVariants}
                         >
                             European Esports <br />Championship 2025
@@ -170,33 +183,33 @@ const SecondBanner: React.FC = () => {
                             variants={itemVariants}
                         >
                             <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
-                                <FaMapMarkerAlt className="text-blue-800 text-xl mr-3" />
+                                <FaMapMarkerAlt className="text-[#3703FF] text-xl mr-3" />
                                 <div>
-                                    <p className="text-xs font-britanica-regular text-gray-600">VENUE</p>
+                                    <p className="text-xs font-britanica-regular text-[#050219]">VENUE</p>
                                     <p className="text-[12px] tracking-[1px] font-britanica">Pristina Olympic Stadium</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
-                                <FaCalendarAlt className="text-blue-800 text-xl mr-3" />
+                                <FaCalendarAlt className="text-[#3703FF] text-xl mr-3" />
                                 <div>
-                                    <p className="text-xs font-britanica-regular text-gray-600">DATE</p>
+                                    <p className="text-xs font-britanica-regular text-[#050219]">DATE</p>
                                     <p className="text-[12px] tracking-[1px] font-britanica">July 09 – 13, 2025</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
-                                <FaTrophy className="text-yellow-500 text-xl mr-3" />
+                                <FaTrophy className="text-[#FFB600] text-xl mr-3" />
                                 <div>
-                                    <p className="text-xs font-britanica-regular text-gray-600">PRIZE POOL</p>
+                                    <p className="text-xs font-britanica-regular text-[#050219]">PRIZE POOL</p>
                                     <p className="text-[12px] tracking-[1px] font-britanica">$500,000</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start backdrop-blur-sm p-3 rounded-lg">
-                                <FaGamepad className="text-blue-800 text-xl mr-3 mt-1" />
+                                <FaGamepad className="text-[#3703FF] text-xl mr-3 mt-1" />
                                 <div className="w-full">
-                                    <p className="text-xs font-britanica-regular text-gray-600">TOURNAMENTS</p>
+                                    <p className="text-xs font-britanica-regular text-[#050219]">TOURNAMENTS</p>
                                     <div className="grid grid-cols-1 gap-3 mt-2">
                                         {games.map((game, index) => (
                                             <div key={index} className="flex justify-between items-center">
