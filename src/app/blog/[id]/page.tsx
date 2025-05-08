@@ -16,7 +16,6 @@ export default function SingleBlogPost() {
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
       <div className="text-center py-20 max-w-2xl px-4">
         <h1 className="text-4xl font-bold font-britanica-regular mb-6">404 - Post Not Found</h1>
-        <p className="text-lg mb-8">The post you're looking for doesn't exist or has been moved.</p>
         <Link
           href="/blog"
           className="inline-block px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all"

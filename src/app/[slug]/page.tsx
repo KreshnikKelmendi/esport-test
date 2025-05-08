@@ -3,7 +3,6 @@
 import { useParams } from 'next/navigation';
 import HomePage from '../components/view/HomePage';
 import AboutPage from '../components/view/AboutPage';
-import BlogPage from '../components/view/BlogPage';
 import Pristina from '../components/view/Pristina';
 import AboutEvent from '../components/view/AboutEvent';
 import SponsorsPage from '../components/view/SponsorsPage';
