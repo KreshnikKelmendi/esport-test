@@ -1,6 +1,6 @@
 // Define the BlogPost type interface
 export interface BlogPost {
-    id: number;
+    id: string;
     title: string;
     date: string;
     category: string;
@@ -12,7 +12,7 @@ export interface BlogPost {
   // Define the blogPosts array with the BlogPost type
   export const blogPosts: BlogPost[] = [
     {
-      id: 1,
+      id: "1",
       title: "2025 European Esports Championship: The Ultimate Showdown",
       date: "April 15, 2025",
       category: "Tournament News",
@@ -22,10 +22,10 @@ export interface BlogPost {
         "Team Phoenix Rising claimed the overall championship title with dominant performances in three categories, marking their third consecutive year as European champions.",
         "This year's championship introduced revolutionary AR spectator technology and the first-ever women's invitational tournament."
       ],
-      accentColor: "from-blue-600 to-purple-600"
+      accentColor: "from-[#050219] to-[#5E65EF]"
     },
     {
-      id: 2,
+      id: "2",
       title: "Rising Stars: Breakout Performers of the Championship",
       date: "April 12, 2025",
       category: "Player Spotlight",
@@ -35,10 +35,10 @@ export interface BlogPost {
         "Valkyrie Esports made history as the first all-female team to reach the Valorant quarterfinals, defeating two top-10 ranked teams.",
         "Analysts are calling this the most competitive championship in history with six nations represented in finals."
       ],
-      accentColor: "from-amber-500 to-pink-500"
+      accentColor: "from-[#FFB600] to-[#3703FF]"
     },
     {
-      id: 3,
+      id: "3",
       title: "Berlin Sets New Standard for Esports Events",
       date: "April 10, 2025",
       category: "Event Coverage",
@@ -48,10 +48,10 @@ export interface BlogPost {
         "Over 45,000 live attendees enjoyed the three-day spectacle, with thousands more at the surrounding fan festival.",
         "Berlin announced ambitious plans to become Europe's esports capital with new training facilities and a dedicated arena by 2025."
       ],
-      accentColor: "from-emerald-500 to-cyan-400"
+      accentColor: "from-[#5E65EF] to-[#FFB600]"
     },
     {
-      id: 4,
+      id: "4",
       title: "Meta Shifts: How Patch Updates Changed the Tournament Landscape",
       date: "April 8, 2025",
       category: "Game Analysis",
@@ -61,10 +61,10 @@ export interface BlogPost {
         "League of Legends saw a 40% increase in unique champion picks compared to last year's championship.",
         "Experts analyze how the meta evolved throughout the tournament and what it means for upcoming events."
       ],
-      accentColor: "from-red-500 to-orange-500"
+      accentColor: "from-[#3703FF] to-[#5E65EF]"
     },
     {
-      id: 5,
+      id: "5",
       title: "Behind the Scenes: The Tech Powering the Championship",
       date: "April 5, 2025",
       category: "Technology",
@@ -74,10 +74,10 @@ export interface BlogPost {
         "From 8K broadcasting to real-time analytics, discover how the tournament pushed technical boundaries.",
         "The production team reveals how they handled over 2PB of data during the three-day event."
       ],
-      accentColor: "from-indigo-500 to-blue-500"
+      accentColor: "from-[#FFB600] to-[#050219]"
     },
     {
-      id: 6,
+      id: "6",
       title: "Fan Experience: More Than Just Watching Games",
       date: "April 3, 2025",
       category: "Event Coverage",
@@ -87,10 +87,10 @@ export interface BlogPost {
         "Virtual meet-and-greets, AR photo ops, and interactive exhibits kept attendees engaged between matches.",
         "Organizers share how they created a festival atmosphere that appealed to both hardcore and casual fans."
       ],
-      accentColor: "from-purple-500 to-pink-500"
+      accentColor: "from-[#050219] to-[#3703FF]"
     },
     {
-      id: 7,
+      id: "7",
       title: "Fan Experience: More Than Just Watching Games",
       date: "April 3, 2025",
       category: "Event Coverage",
@@ -100,7 +100,7 @@ export interface BlogPost {
         "Virtual meet-and-greets, AR photo ops, and interactive exhibits kept attendees engaged between matches.",
         "Organizers share how they created a festival atmosphere that appealed to both hardcore and casual fans."
       ],
-      accentColor: "from-purple-500 to-pink-500"
+      accentColor: "from-[#3703FF] to-[#5E65EF]"
     }
   ];
   

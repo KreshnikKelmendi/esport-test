@@ -1,7 +1,8 @@
 import React from 'react'
 import Header from '../header/Header'
-import GridBlog from '../blog/GridBlog'
+
 import Footer from '../footer/Footer'
+import GridBlog from '@/app/blog/GridBlog'
 
 const BlogPage = () => {
   return (

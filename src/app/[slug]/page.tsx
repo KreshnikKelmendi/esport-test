@@ -7,6 +7,8 @@ import BlogPage from '../components/view/BlogPage';
 import Pristina from '../components/view/Pristina';
 import AboutEvent from '../components/view/AboutEvent';
 import SponsorsPage from '../components/view/SponsorsPage';
+import Blog from '../blog/page';
+
 
 
 
@@ -17,10 +19,9 @@ export default function DynamicPage() {
     'home': <HomePage />,
     'about-fesk': <AboutPage />,
     'about-event': <AboutEvent />,
-    'news': <BlogPage />,
+    'blog': <Blog />,
     'what-to-visit-in-Pristina': <Pristina  />,
-    'sponsors': <SponsorsPage   />,
-  
+    'sponsors': <SponsorsPage />,
   };
 
   const PageComponent = pageComponents[slug as string];
@@ -28,7 +29,7 @@ export default function DynamicPage() {
   if (!PageComponent) {
     return (
       <div className="text-center py-20">
-        <h1 className="text-4xl font-bold">404 - Page Not Found</h1>
+        <h1 className="text-4xl font-bold font-britanica-regular">404 - Page Not Found</h1>
       </div>
     );
   }

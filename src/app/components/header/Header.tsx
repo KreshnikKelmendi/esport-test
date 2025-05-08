@@ -30,10 +30,9 @@ const Header = () => {
       subItems: [
         { id: 'about-event', label: 'About Event', href: '/about-event' },
         { id: 'about-fesk', label: 'About FESK', href: '/about-fesk' },
-        { id: 'team', label: 'Our Team', href: '/team' }
       ]
     },
-    { id: 'news', label: 'News', href: '/news' },
+    { id: 'blog', label: 'Blog', href: '/blog' },
     { id: 'sponsors', label: 'Sponsors', href: '/sponsors' }
   ];
 
@@ -51,7 +50,7 @@ const Header = () => {
       {/* Header Background */}
       <div className={`
           sticky w-full 
-          ${pathname === '/about-fesk' || pathname === '/news' || pathname === '/what-to-visit-in-Pristina' || pathname === '/sponsors' || pathname === '/about-event'
+          ${pathname === '/about-fesk' || pathname === '/blog' || pathname === '/what-to-visit-in-Pristina' || pathname === '/sponsors' || pathname === '/about-event' || pathname.startsWith('/blog/')
             ? 'bg-gradient-to-r font-britanica-regular from-[#0a0829] to-[#050219]'
             : isSticky
             ? 'bg-gradient-to-r from-[#0a0829] to-[#4e5bfc] shadow-2xl'
@@ -132,26 +131,32 @@ const Header = () => {
 
             {/* Social Icons - Desktop */}
             <div className="hidden lg:flex items-center space-x-5">
-              <motion.a 
-                href="#" 
-                className="text-white/80 hover:text-blue-400 transition-colors"
+            <motion.a 
+                href="https://www.twitch.tv/federataesportskosova?fbclid=PAZXh0bgNhZW0CMTEAAacbit6j6osapE4iI2CnymY9ddfmLLejOq4J73wDaL18RtkiKXdoCf2iWeVfLA_aem_WFgJiAsdpmVFQfjW04Ht_Q2g" 
+                className="text-white/80 hover:text-purple-500 transition-colors"
+                rel='noopener noreferrer'
+                target='_blank' 
                 whileHover={{ y: -2 }}
               >
-                <FaFacebookF size={18} />
+                <FaTwitch size={18} />
               </motion.a>
               <motion.a 
-                href="#" 
+                href="https://www.instagram.com/federataesportskosova/" 
+                rel='noopener noreferrer'
+                target='_blank' 
                 className="text-white/80 hover:text-pink-500 transition-colors"
                 whileHover={{ y: -2 }}
               >
                 <FaInstagram size={18} />
               </motion.a>
               <motion.a 
-                href="#" 
-                className="text-white/80 hover:text-purple-500 transition-colors"
+                href="https://www.facebook.com/feSKosova"
+                rel='noopener noreferrer'
+                target='_blank' 
+                className="text-white/80 hover:text-blue-400 transition-colors"
                 whileHover={{ y: -2 }}
               >
-                <FaTwitch size={18} />
+                <FaFacebookF size={18} />
               </motion.a>
             </div>
 

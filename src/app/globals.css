@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-body{
+body {
   background-color: #FFF6E7;
 }
 
@@ -17,7 +17,7 @@ body{
 @font-face {
   font-family: 'Britanica';
   src: url('../../public/fonts/britanica/Britanica\ Expanded\ Black.ttf');
- 
+
 }
 
 @font-face {
@@ -34,14 +34,14 @@ body{
 }
 
 .firstServiceImage {
-  -webkit-mask-image: 
+  -webkit-mask-image:
     linear-gradient(to right, transparent 1%, #050219 30%),
     linear-gradient(to left, transparent 1%, #050219 30%),
     linear-gradient(to bottom, transparent 1%, #050219 30%),
     linear-gradient(to top, transparent 1%, #050219 30%);
   -webkit-mask-composite: intersect;
   mask-composite: intersect;
-  mask-image: 
+  mask-image:
     linear-gradient(to right, transparent 1%, #050219 30%),
     linear-gradient(to left, transparent 1%, #050219 30%),
     linear-gradient(to bottom, transparent 1%, #050219 30%),
@@ -49,5 +49,18 @@ body{
   mask-composite: intersect;
 }
 
+.text-stroke {
+  -webkit-text-stroke: 3px #050219; 
+  color: transparent; 
+  animation: strokeAnimation 1s ease-in-out forwards; 
+}
 
-
+@keyframes strokeAnimation {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

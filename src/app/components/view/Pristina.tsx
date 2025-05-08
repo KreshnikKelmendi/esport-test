@@ -12,7 +12,7 @@ const Pristina = () => {
             name: "Newborn Monument",
             description: "The iconic Newborn Monument symbolizes Kosovo's independence, unveiled on February 17, 2008. Annually repainted with fresh themes, this living monument evolves with the nation—a vibrant centerpiece of Pristina's urban landscape.",
             highlight: "Visit during Independence Day to witness the annual repainting ceremony",
-            image: "/assets/pristina/newborn.jpg",
+            image: "/assets/pristina/newborn.png",
             alt: "Colorful Newborn Monument in Pristina"
         },
         {
@@ -20,7 +20,7 @@ const Pristina = () => {
             name: "National Library",
             description: "An architectural marvel with its 99 domes and futuristic metal mesh exterior. This cultural beacon houses over two million treasures, including rare Albanological collections that tell Kosovo's intellectual story.",
             highlight: "Free guided tours reveal the fascinating design controversies",
-            image: "/assets/pristina/bibloteka.jpg",
+            image: "/assets/pristina/bibloteka.png",
             alt: "Unique architecture of National Library of Kosovo"
         },
         {
@@ -28,7 +28,7 @@ const Pristina = () => {
             name: "Xhamia e Madhe (Great Mosque)",
             description: "The majestic Great Mosque stands as one of Pristina's most significant Ottoman landmarks. With its towering minaret and elegant dome, this architectural gem showcases classic Islamic design elements.",
             highlight: "Visit outside prayer times to admire the architecture",
-            image: "/assets/pristina/mosque.jpg",
+            image: "/assets/pristina/mosque.png",
             alt: "Xhamia e Madhe (Great Mosque) in Pristina"
         },
         {
@@ -36,7 +36,7 @@ const Pristina = () => {
             name: "Mother Teresa Cathedral",
             description: "Soaring 70 meters above the city, this modernist masterpiece honors the Albanian-Indian saint. Its luminous stained glass transforms sunlight into kaleidoscopic patterns across the marble interior.",
             highlight: "Sunset paints the interior with magical colored light",
-            image: "/assets/pristina/cathedral.JPG",
+            image: "/assets/pristina/cathedral.png",
             alt: "Modern Mother Teresa Cathedral in Pristina"
         },
         {
@@ -44,7 +44,7 @@ const Pristina = () => {
             name: "Ethnological Museum",
             description: "Step into an 18th-century Ottoman time capsule. This meticulously preserved complex showcases Kosovo's rich heritage through traditional crafts, textiles, and domestic life exhibits.",
             highlight: "The tranquil courtyard garden offers a serene escape",
-            image: "/assets/pristina/MUZEU.jpg",
+            image: "/assets/pristina/MUZEU.png",
             alt: "Ottoman-style Ethnological Museum building"
         }
     ];

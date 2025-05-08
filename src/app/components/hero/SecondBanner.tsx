@@ -221,7 +221,7 @@ const SecondBanner: React.FC = () => {
 
                         <motion.div className="pt-4" variants={itemVariants}>
                             <Link
-                                href="/#"
+                                href="/about-event"
                                 className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg font-britanica outline text-black rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white"
                             >
                                 Learn More

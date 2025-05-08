@@ -9,24 +9,19 @@ import { FaX } from "react-icons/fa6";
 import Image from "next/image";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
 
   const socialLinks = [
     {
       icon: FaTwitch,
-      url: "https://twitch.tv/yourbrand",
-
-
+      url: "https://www.twitch.tv/federataesportskosova?fbclid=PAZXh0bgNhZW0CMTEAAacbit6j6osapE4iI2CnymY9ddfmLLejOq4J73wDaL18RtkiKXdoCf2iWeVfLA_aem_WFgJiAsdpmVFQfjW04Ht_Q2g",
     },
     {
       icon: FaFacebook,
-      url: "https://facebook.com/yourbrand",
-
-
+      url: "https://www.facebook.com/feSKosova",
     },
     {
       icon: FaInstagram,
-      url: "https://instagram.com/yourbrand",
+      url: "https://www.instagram.com/federataesportskosova/",
     },
     {
       icon: FaX,
@@ -35,11 +30,11 @@ const Footer = () => {
   ];
 
   const quickLinks = [
-    { label: "About Us", path: "/about" },
-    { label: "Tournaments", path: "/tournaments" },
-    { label: "Teams", path: "/teams" },
-    { label: "Schedule", path: "/schedule" },
-    { label: "Contact", path: "/contact" },
+    { label: "Home", path: "/" },
+    { label: "About Event", path: "/about-event" },
+    { label: "News", path: "/blog" },
+    { label: "Sponsors", path: "/sponsors" },
+    { label: "About FESK", path: "/about-fesk" },
   ];
 
   return (
@@ -201,18 +196,12 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0 font-britanica-regular">
-            &copy; {currentYear} FESK. All rights reserved.
+            &copy; EUROPEAN ESPORTS CHAMPIONSHIP 2025.
           </p>
           <div className="lg:flex space-x-6 font-britanica-regular hidden">
-            <Link href="/privacy" className="text-gray-500 hover:text-white text-sm transition-all duration-300">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-gray-500 hover:text-white text-sm transition-all duration-300">
-              Terms of Service
-            </Link>
-            <Link href="/cookies" className="text-gray-500 hover:text-white text-sm transition-all duration-300">
-              Cookie Policy
-            </Link>
+            <p className="text-gray-500 text-sm mb-4 md:mb-0 font-britanica-regular">
+              All rights reserved.
+            </p>
           </div>
         </div>
       </div>
