@@ -52,14 +52,13 @@ const Pristina = () => {
     // Animation controls
     const controls = useAnimation();
     const [ref, inView] = useInView({
-        triggerOnce: true
+        triggerOnce: true,
+        threshold: 0.1
     });
 
     useEffect(() => {
         if (inView) {
             controls.start("visible");
-        } else {
-            controls.start("hidden");
         }
     }, [controls, inView]);
 
@@ -137,7 +136,7 @@ const Pristina = () => {
             <Header />
 
             {/* Animated Hero Section */}
-            <div className="relative h-[50vh] flex items-center justify-center bg-gradient-to-r from-[#0a0829] to-[#050219] overflow-hidden">
+            <div className="relative h-[50vh] min-h-[400px] flex items-center justify-center bg-gradient-to-r from-[#0a0829] to-[#050219] overflow-hidden">
                 <motion.div
                     className="relative z-10 text-center px-4 max-w-4xl"
                     initial="hidden"
@@ -183,7 +182,7 @@ const Pristina = () => {
             </div>
 
             {/* Content Container */}
-            <div className="mx-auto px-4 sm:px-10 py-16">
+            <div className="mx-auto px-4 sm:px-6 lg:px-10 py-16">
                 {/* Attractions Section */}
                 <section className="mb-24" ref={ref}>
                     <motion.div
@@ -212,8 +211,8 @@ const Pristina = () => {
                                 className="group"
                                 variants={fadeInUp}
                             >
-                                <div className="flex flex-col lg:flex-row gap-8 items-center">
-                                    <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}`}>
+                                <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}>
+                                    <div className="lg:w-1/2 w-full">
                                         <motion.div
                                             className="relative h-80 lg:h-[55vh] w-full overflow-hidden rounded-lg"
                                             whileHover={{ scale: 1.02 }}
@@ -222,13 +221,16 @@ const Pristina = () => {
                                             <Image
                                                 src={attraction.image}
                                                 alt={attraction.alt}
-                                                className="transition-transform object-cover duration-500 group-hover:scale-105"
-                                                width={'100'}
-                                                height={'100'}
+                                                fill
+                                                style={{ objectFit: 'cover' }}
+                                                className="transition-transform duration-500 group-hover:scale-105"
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+                                                priority={index === 0}
                                             />
                                         </motion.div>
                                     </div>
-                                    <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}`}>
+
+                                    <div className="lg:w-1/2 w-full">
                                         <div className="flex items-center mb-4">
                                             <span className="text-gray-400 text-sm font-mono mr-4">0{index + 1}</span>
                                             <h3 className="text-2xl font-britanica text-black">
