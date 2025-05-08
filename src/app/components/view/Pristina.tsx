@@ -222,9 +222,9 @@ const Pristina = () => {
                                             <Image
                                                 src={attraction.image}
                                                 alt={attraction.alt}
-                                                layout="fill"
-                                                objectFit="cover"
-                                                className="transition-transform duration-500 group-hover:scale-105"
+                                                className="transition-transform object-cover duration-500 group-hover:scale-105"
+                                                width={'100'}
+                                                height={'100'}
                                             />
                                         </motion.div>
                                     </div>
