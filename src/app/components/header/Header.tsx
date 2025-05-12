@@ -32,7 +32,7 @@ const Header = () => {
         { id: 'about-fesk', label: 'About FESK', href: '/about-fesk' },
       ]
     },
-    { id: 'blog', label: 'Blog', href: '/blog' },
+    { id: 'blog', label: 'News', href: '/blog' },
     { id: 'sponsors', label: 'Sponsors', href: '/sponsors' }
   ];
 

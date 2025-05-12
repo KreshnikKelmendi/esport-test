@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
+import Event2 from './Event2';
 
 
 const Event = () => {
@@ -32,6 +33,7 @@ const Event = () => {
     };
 
     return (
+        <>
         <div className="min-h-screen bg-gradient-to-r from-[#0a0829] to-[#050219] text-white">
             {/* Enhanced Hero Section */}
             <section className="relative mx-4 lg:mx-10 h-screen max-h-[900px] flex items-center justify-center overflow-hidden">
@@ -148,7 +150,7 @@ const Event = () => {
 
                 </motion.div>
             </section>
-
+            <Event2 />
             {/* Event Details */}
             <motion.section
                 ref={ref}
@@ -216,11 +218,11 @@ const Event = () => {
 
                             {/* Capacity Cell - Full width on mobile, half on sm, normal on lg */}
                             <motion.div
-                                className="col-span-1 sm:col-span-1 lg:col-span-1 lg:row-span-1 text-center rounded-xl bg-gradient-to-br from-[#050219] to-blue-950/70 p-4 flex flex-col justify-between"
+                                className="col-span-1 sm:col-span-1 h-[30vh] lg:h-full lg:col-span-1 lg:row-span-1 text-center rounded-xl bg-gradient-to-br from-[#050219] to-blue-950/70 p-4 flex flex-col justify-between"
                                 whileHover={{ y: -3 }}
                             >
                                 <div className="text-white text-base font-britanica-regular">STADIUM CAPACITY</div>
-                                <div className="text-2xl text-[#FFB600] sm:text-5xl 2xl:text-7xl font-bold font-britanica">5,000+</div>
+                                <div className="text-5xl text-[#FFB600] sm:text-5xl 2xl:text-7xl font-bold font-britanica">5,000+</div>
 
                                 <div className="text-[12px] text-white text-left border-t border-blue-900/50 py-2 font-britanica-regular">
                                     Expandable for special events with 360° seating providing optimal viewing angles from every position.
@@ -228,8 +230,8 @@ const Event = () => {
                             </motion.div>
 
 
-                            <motion.div
-                                className="col-span-1 sm:col-span-1 lg:col-span-1 flex justify-center items-center lg:row-span-1 rounded-xl bg-gradient-to-br from-[#050219] via-[] to-blue-950/70 p-4 text-white"
+                            {/* <motion.div
+                                className="col-span-1 sm:col-span-1 lg:col-span-1 h-[30vh] lg:h-full flex justify-center items-center lg:row-span-1 rounded-xl bg-gradient-to-br from-[#050219] via-[] to-blue-950/70 p-4 text-white"
                                 whileHover={{ y: -3 }}
                             >
 
@@ -239,15 +241,29 @@ const Event = () => {
                                         taking place from 16 May to 1 June. <br /> <br />The top-performing teams from this stage will earn their spot at the European Esports Championship, where they will battle for national glory in front of a passionate esports audience.
                                     </p>
                                 </div>
-                            </motion.div>
+                            </motion.div> */}
 
 
                             {/* Gallery Cell - Full width on mobile, normal on larger screens */}
                             <motion.div
-                                className="col-span-1 sm:col-span-2 lg:col-span-3 row-span-12 lg:row-span-1 rounded-xl bg-[#050219] p-4 relative overflow-hidden group"
+                                className="col-span-1 sm:col-span-2 h-[30vh] lg:h-full lg:col-span-1 row-span-12 lg:row-span-1 rounded-xl bg-[#050219] p-4 relative overflow-hidden group"
                                 whileHover={{ scale: 0.98 }}
                             >
                                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"></div>
+
+                            </motion.div>
+                            <motion.div
+                                className="col-span-1 sm:col-span-2 h-[30vh] lg:h-full lg:col-span-2 row-span-12 lg:row-span-1 rounded-xl bg-[#050219] p-4 relative overflow-hidden group"
+                                whileHover={{ scale: 0.98 }}
+                            >
+                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"></div>
+
+                            </motion.div>
+                            <motion.div
+                                className="col-span-1 sm:col-span-2 h-[30vh] lg:h-full lg:col-span-1 row-span-12 lg:row-span-1 rounded-xl bg-[#050219] p-4 relative overflow-hidden group"
+                                whileHover={{ scale: 0.98 }}
+                            >
+                                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center opacity-20 group-hover:opacity-30 transition-opacity"></div>
 
                             </motion.div>
                         </div>
@@ -257,6 +273,7 @@ const Event = () => {
                 </div>
             </motion.section>
         </div>
+        </>
     );
 };
 
