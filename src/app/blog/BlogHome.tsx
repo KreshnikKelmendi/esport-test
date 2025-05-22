@@ -41,7 +41,7 @@ const BlogHome = () => {
     return (
       <button
         onClick={onClick}
-        className={`absolute cursor-pointer ${direction === "left" ? "left-0" : "right-0"} top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-50 hover:bg-opacity-70 rounded-full p-2 transition-all duration-300 hidden lg:block`}
+        className={`absolute cursor-pointer ${direction === "left" ? "left-0" : "right-0"} top-1/2 -translate-y-1/2 z-10 bg-gradient-to-r from-[#FFB600] to-[#5E65EF] hover:bg-opacity-70 rounded-full p-2 transition-all duration-300 hidden lg:block`}
         aria-label={`${direction === "left" ? "Previous" : "Next"} slide`}
       >
         <svg
@@ -88,7 +88,7 @@ const BlogHome = () => {
           <Carousel
             responsive={responsive}
             infinite={true}
-            autoPlay={true}
+            autoPlay={false}
             keyBoardControl={true}
             customTransition="transform 500ms ease-in-out"
             transitionDuration={500}
@@ -99,7 +99,7 @@ const BlogHome = () => {
             customRightArrow={<CustomArrow direction="right" />}
             renderButtonGroupOutside={false}
             removeArrowOnDeviceType={["mobile", "tablet"]}
-            showDots={false}
+            showDots={true}
           >
             {blogPosts?.map((post: BlogPost) => (
               <div key={post.id} className="overflow-hidden h-full">

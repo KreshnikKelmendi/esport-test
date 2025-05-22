@@ -7,10 +7,49 @@ export interface BlogPost {
     imageUrl: string;
     content: string[];
     accentColor: string;
+    flags?: string[];
 }
 
 // Define the blogPosts array with the BlogPost type
 export const blogPosts: BlogPost[] = [
+  {
+    id: "13",
+    title: "Qualified Nations for DOTA2 European Championship Revealed!",
+    date: "May 20, 2025",
+    category: "Tournament Updates",
+    imageUrl: "/assets/blog/dota-2.jpg",
+    content: [
+      "The European Esports Championship 2025 is shaping up to be the most competitive DOTA2 tournament in European history! After months of intense qualifiers, we're excited to reveal the 12 nations that will battle for continental supremacy in Pristina this July.",
+      "Here are the qualified nations:",
+      "Kosovo",
+      "Ukraine",
+      "Georgia",
+      "Romania",
+      "Turkey",
+      "Belarus",
+      "North Macedonia",
+      "Moldova",
+      "Bulgaria",
+      "Hungary",
+      "France",
+      "Serbia",
+    ],
+    flags: [
+      "https://flagcdn.com/w320/xk.png", // Kosovo
+      "https://flagcdn.com/w320/ua.png", // Ukraine
+      "https://flagcdn.com/w320/ge.png", // Georgia
+      "https://flagcdn.com/w320/ro.png", // Romania
+      "https://flagcdn.com/w320/tr.png", // Turkey
+      "https://flagcdn.com/w320/by.png", // Belarus
+      "https://flagcdn.com/w320/mk.png", // North Macedonia
+      "https://flagcdn.com/w320/md.png", // Moldova
+      "https://flagcdn.com/w320/bg.png", // Bulgaria
+      "https://flagcdn.com/w320/hu.png", // Hungary
+      "https://flagcdn.com/w320/fr.png", // France
+      "https://flagcdn.com/w320/rs.png", // Serbia
+    ],
+    accentColor: "from-[#3703FF] to-[#FFB600]"
+},
     {
         id: "12",
         title: "Kosovo’s Dota 2 Team: Ready to Conquer the Global Esports Arena!",

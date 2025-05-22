@@ -60,7 +60,7 @@ const GridBlog = () => {
                                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                                     </svg>
-                                    Grid
+                           
                                 </button>
                                 <button
                                     onClick={() => setViewMode('portrait')}
@@ -69,7 +69,7 @@ const GridBlog = () => {
                                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                                     </svg>
-                                    List
+                                 
                                 </button>
                             </div>
                         </div>
@@ -97,7 +97,7 @@ const GridBlog = () => {
                                     {/* Content */}
                                     <div className="relative z-10 p-5 bg-[#050219] backdrop-blur-sm rounded-b-2xl">
                                         <div className="flex justify-between items-center mb-3">
-                                            <span className="text-xs text-white">{post.date}</span>
+                                            <span className="text-xs text-white font-britanica">{post.date}</span>
                                         </div>
 
                                         <h3 className="text-base font-britanica text-white mb-3 leading-tight group-hover:text-blue-400 transition-colors">
