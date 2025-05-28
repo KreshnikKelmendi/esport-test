@@ -6,12 +6,16 @@ import Sponsor from '../sponsors/Sponsor'
 import Footer from '../footer/Footer'
 import Visit from '@/app/blog/Visit'
 import BlogHome from '@/app/blog/BlogHome'
+import ThirdBanner from '../about/ThirdBanner'
+
 
 
 const HomePage = () => {
     return (
         <>
-            <Banner />
+            {/* <Banner /> */}
+           <ThirdBanner />
+            {/* <Event /> */}
             <SecondBanner />
             <BlogHome />
             <Visit />

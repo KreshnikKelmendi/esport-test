@@ -58,26 +58,27 @@ const Countdown = () => {
   };
 
   return (
-    <motion.div 
-      className="w-full max-w-4xl mx-auto px-4 py-12"
+    <motion.div
+      className="w-full max-w-4xl mx-auto px-4 "
       initial="hidden"
       animate="visible"
       variants={countdownVariants}
     >
-      <div className="text-center mb-8">
+      {/* <div className="text-center mb-8">
         <h2 className="text-2xl md:text-4xl uppercase font-britanica-regular text-white mb-4">
           Countdown to <span className='text-3xl lg:text-6xl bg-clip-text text-transparent font-britanica bg-gradient-to-r from-[#FFB600] to-[#5E65EF]'>Championship</span>
         </h2>
         <p className="text-white text-sm lg:text-lg font-britanica-regular">
         The European Esports Championship begins on July 9 - 13, 2025 in Pristina
         </p>
-      </div>
+      </div> */}
+      <p className='font-britanica-regular text-white text-sm'>Countdown to Championship</p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {Object.entries(timeLeft).map(([unit, value]) => (
-          <motion.div 
+          <motion.div
             key={unit}
-            className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-xl p-6 text-center"
+            className="rounded-xl p-6 text-center"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
           >
@@ -92,7 +93,7 @@ const Countdown = () => {
       </div>
 
       {/* Progress bar */}
-     
+
 
       <style jsx global>{`
         .countdown-item {

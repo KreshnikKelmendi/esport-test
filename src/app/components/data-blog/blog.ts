@@ -13,6 +13,52 @@ export interface BlogPost {
 // Define the blogPosts array with the BlogPost type
 export const blogPosts: BlogPost[] = [
   {
+    id: "14",
+    title: "Top 16 Nations Qualify for CS2 European Championship!",
+    date: "May 28, 2025",
+    category: "Tournament Updates",
+    imageUrl: "/assets/blog/cscscs.png",
+    content: [
+      "After weeks of intense qualifiers, we're thrilled to announce the 16 nations that have secured their spots in the Counter-Strike 2 European Championship 2025! These elite teams will compete in Pristina this July for continental glory and a chance to represent Europe on the world stage.",
+      "Here are the qualified nations:",
+      "Kosovo",
+      "Bulgaria",
+      "Czech Republic",
+      "Denmark",
+      "Germany",
+      "Hungary",
+      "Ireland",
+      "Latvia",
+      "Lithuania",
+      "Netherlands",
+      "North Macedonia",
+      "Poland",
+      "Slovakia",
+      "Spain",
+      "Sweden",
+      "Ukraine",
+    ],
+    flags: [
+      "https://flagcdn.com/w320/xk.png",
+      "https://flagcdn.com/w320/bg.png", 
+      "https://flagcdn.com/w320/cz.png", 
+      "https://flagcdn.com/w320/dk.png", 
+      "https://flagcdn.com/w320/de.png", 
+      "https://flagcdn.com/w320/hu.png", 
+      "https://flagcdn.com/w320/ie.png", 
+      "https://flagcdn.com/w320/lv.png", 
+      "https://flagcdn.com/w320/lt.png", 
+      "https://flagcdn.com/w320/nl.png", 
+      "https://flagcdn.com/w320/mk.png", 
+      "https://flagcdn.com/w320/pl.png", 
+      "https://flagcdn.com/w320/sk.png", 
+      "https://flagcdn.com/w320/es.png", 
+      "https://flagcdn.com/w320/se.png", 
+      "https://flagcdn.com/w320/ua.png", 
+    ],
+    accentColor: "from-[#050219] to-[#3703FF]"
+  },
+  {
     id: "13",
     title: "Qualified Nations for DOTA2 European Championship Revealed!",
     date: "May 20, 2025",
@@ -35,18 +81,18 @@ export const blogPosts: BlogPost[] = [
       "Serbia",
     ],
     flags: [
-      "https://flagcdn.com/w320/xk.png", // Kosovo
-      "https://flagcdn.com/w320/ua.png", // Ukraine
-      "https://flagcdn.com/w320/ge.png", // Georgia
-      "https://flagcdn.com/w320/ro.png", // Romania
-      "https://flagcdn.com/w320/tr.png", // Turkey
-      "https://flagcdn.com/w320/by.png", // Belarus
-      "https://flagcdn.com/w320/mk.png", // North Macedonia
-      "https://flagcdn.com/w320/md.png", // Moldova
-      "https://flagcdn.com/w320/bg.png", // Bulgaria
-      "https://flagcdn.com/w320/hu.png", // Hungary
-      "https://flagcdn.com/w320/fr.png", // France
-      "https://flagcdn.com/w320/rs.png", // Serbia
+      "https://flagcdn.com/w320/xk.png",
+      "https://flagcdn.com/w320/ua.png", 
+      "https://flagcdn.com/w320/ge.png", 
+      "https://flagcdn.com/w320/ro.png", 
+      "https://flagcdn.com/w320/tr.png",
+      "https://flagcdn.com/w320/by.png", 
+      "https://flagcdn.com/w320/mk.png", 
+      "https://flagcdn.com/w320/md.png", 
+      "https://flagcdn.com/w320/bg.png",
+      "https://flagcdn.com/w320/hu.png", 
+      "https://flagcdn.com/w320/fr.png", 
+      "https://flagcdn.com/w320/rs.png", 
     ],
     accentColor: "from-[#3703FF] to-[#FFB600]"
 },
