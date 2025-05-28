@@ -1,15 +1,12 @@
 'use client'
-import { useInView, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import React, { useRef } from 'react'
 import Header from '../header/Header';
-import CountdownTimer from './CountDownTimer';
 import Countdown from '../hero/CountDown';
 
 
 const ThirdBanner = () => {
     const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.1 });
-
     // Animation variants
     const container = {
         hidden: { opacity: 0 },
