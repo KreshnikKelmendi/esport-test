@@ -1,12 +1,12 @@
 'use client'
 import { motion } from 'framer-motion';
-import React, { useRef } from 'react'
+import React from 'react'
 import Header from '../header/Header';
 import Countdown from '../hero/CountDown';
 
 
 const ThirdBanner = () => {
-    const ref = useRef(null);
+
     // Animation variants
     const container = {
         hidden: { opacity: 0 },
