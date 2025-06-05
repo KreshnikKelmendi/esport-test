@@ -143,12 +143,7 @@ const Event = () => {
                             EUROPEAN ESPORTS CHAMPIONSHIP <br/>2025
                         </motion.span><br />
                     </motion.h1>
-                    <motion.p
-                        variants={item}
-                        className="text-xl font-britanica-regular text-neutral-300 max-w-2xl mx-auto mb-10"
-                    >
-                        The pinnacle of competitive gaming comes to Kosovo with $500,000 in prizes
-                    </motion.p>
+                  
 
                 </motion.div>
             </section>

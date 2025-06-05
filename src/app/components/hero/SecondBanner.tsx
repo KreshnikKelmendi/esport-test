@@ -198,13 +198,13 @@ const SecondBanner: React.FC = () => {
                                 </div>
                             </div>
 
-                            <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
+                            {/* <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
                                 <FaTrophy className="text-[#FFB600] text-xl mr-3" />
                                 <div>
                                     <p className="text-xs font-britanica-regular text-[#050219]">PRIZE POOL</p>
                                     <p className="text-[12px] tracking-[1px] font-britanica">$500,000</p>
                                 </div>
-                            </div>
+                            </div> */}
 
                             <div className="flex items-start backdrop-blur-sm p-3 rounded-lg">
                                 <FaGamepad className="text-[#3703FF] text-xl mr-3 mt-1" />
