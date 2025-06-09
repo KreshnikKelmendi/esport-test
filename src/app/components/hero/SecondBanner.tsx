@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaCalendarAlt, FaMapMarkerAlt, FaTrophy, FaGamepad, FaUsers } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt, FaGamepad, FaUsers } from 'react-icons/fa';
 import { SiCounterstrike, SiDota2 } from 'react-icons/si';
 import Image from 'next/image';
 import Link from 'next/link';
