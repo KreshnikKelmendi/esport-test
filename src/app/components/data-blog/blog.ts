@@ -13,11 +13,42 @@ export interface BlogPost {
 // Define the blogPosts array with the BlogPost type
 export const blogPosts: BlogPost[] = [
   {
+    id: "15",
+    title: "Top 8 Nations Qualify for CS2 Women European Championship!",
+    date: "June 2, 2025",
+    category: "Tournament Updates",
+    imageUrl: "/assets/blog/cs2-women.jpg",
+    content: [
+      "After weeks of intense qualifiers, we're thrilled to announce the 8 nations that have secured their spots in the Counter-Strike 2 Women European Championship 2025! These elite teams will compete in Pristina this July for continental glory and a chance to represent Europe on the world stage.",
+      "Here are the qualified nations:",
+      "Denmark",
+      "France",
+      "Germany",
+      "Latvia",
+      "Netherlands",
+      "Portugal",
+      "Slovakia",
+      "Sweden",
+    ],
+    flags: [
+      "https://flagcdn.com/w320/dk.png", 
+      "https://flagcdn.com/w320/fr.png", 
+      "https://flagcdn.com/w320/de.png", 
+      "https://flagcdn.com/w320/lv.png", 
+      "https://flagcdn.com/w320/nl.png", 
+      "https://flagcdn.com/w320/pt.png", 
+      "https://flagcdn.com/w320/sk.png", 
+      "https://flagcdn.com/w320/se.png", 
+    ],
+    accentColor: "from-[#050219] to-[#3703FF]"
+  },
+  
+  {
     id: "14",
     title: "Top 16 Nations Qualify for CS2 European Championship!",
     date: "May 28, 2025",
     category: "Tournament Updates",
-    imageUrl: "/assets/blog/cscscs.png",
+    imageUrl: "/assets/blog/cs2-2025.jpg",
     content: [
       "After weeks of intense qualifiers, we're thrilled to announce the 16 nations that have secured their spots in the Counter-Strike 2 European Championship 2025! These elite teams will compete in Pristina this July for continental glory and a chance to represent Europe on the world stage.",
       "Here are the qualified nations:",
