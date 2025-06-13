@@ -9,8 +9,6 @@ import SponsorsPage from '../components/view/SponsorsPage';
 import Blog from '../blog/page';
 
 
-
-
 export default function DynamicPage() {
   const { slug } = useParams();
 

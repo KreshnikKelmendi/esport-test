@@ -51,7 +51,7 @@ const AllSponsors: React.FC = () => {
                     className="text-center mb-24"
                 >
                     <h2 className="text-4xl md:text-5xl font-britanica mb-4">
-                        Our{' '}
+                        {' '}
                         <motion.span
                             animate={{
                                 backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],

@@ -76,15 +76,15 @@ const Accordion = () => {
     return (
         <motion.div
             ref={ref}
-            className="mx-auto mt-16 lg:mt-24 px-5 lg:px-10"
+            className="mx-auto pt-16 lg:pt-24 px-5 lg:px-10 bg-gradient-to-r from-[#0a0829] to-[#050219]"
             variants={container}
             initial="hidden"
             animate={isInView ? "show" : "hidden"}
         >
 
             <div className="mb-16 relative ml-0 lg:ml-24">
-                <h3 className="text-3xl text-[#050219] lg:text-5xl font-britanica mb-4">Tournament Details</h3>
-                <p className="text-lg lg:text-xl text-gray-700 font-britanica-regular max-w-2xl">
+                <h3 className="text-3xl text-white lg:text-5xl font-britanica mb-4">Tournament Details</h3>
+                <p className="text-lg lg:text-xl text-white font-britanica-regular max-w-2xl">
                     Everything you need to know about the 2025 European Esports Championship
                 </p>
 
@@ -95,7 +95,7 @@ const Accordion = () => {
                     animate={isInView ? { opacity: 0.20, x: 0 } : { opacity: 0, x: -50 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
                 >
-                    <h2 className="text-[120px] text-stroke xl:text-[180px] font-britanica uppercase tracking-widest text-[#5E65EF] whitespace-nowrap pointer-events-none">
+                    <h2 className="text-[120px] text-stroke xl:text-[180px] font-britanica uppercase tracking-widest text-[#FFB600] whitespace-nowrap pointer-events-none">
                         FAQ
                     </h2>
                 </motion.div>
@@ -105,20 +105,20 @@ const Accordion = () => {
             {items.map((item, index) => (
                 <motion.div
                     key={item.id}
-                    className="mb-1"
+                    className=""
                     variants={itemVariants}
                 >
                     <button
-                        className={`flex items-center cursor-pointer w-full pb-6 text-left border-t border-[#050219] ${activeIndex === index ? '' : ''}`}
+                        className={`flex items-center cursor-pointer w-full pb-6 text-left border-t border-[#FFB600] ${activeIndex === index ? '' : ''}`}
                         onClick={() => toggleAccordion(index)}
                     >
-                        <span className="lg:text-4xl font-britanica-regular lg:w-40 lg:h-24 flex justify-center items-center text-white bg-[#050219] rounded-br-2xl p-2 font-bold text-right mr-8">
+                        <span className="lg:text-4xl font-britanica-regular lg:w-40 lg:h-24 flex justify-center items-center text-white bg-[#FFB600] rounded-br-2xl p-2 font-bold text-right mr-8">
                             {String(item.id).padStart(2, '0')}
                         </span>
-                        <span className="lg:text-3xl tracking-[1px] font-britanica-regular flex-1">
+                        <span className="lg:text-3xl tracking-[1px] font-britanica-regular text-white flex-1">
                             {item.title}
                         </span>
-                        <span className="lg:text-4xl font-light ml-4">
+                        <span className="lg:text-4xl font-light text-white font-britanica-regular ml-4">
                             {activeIndex === index ? '−' : '+'}
                         </span>
                     </button>
@@ -146,7 +146,7 @@ const Accordion = () => {
                                 className="overflow-hidden"
                             >
                                 <div className="p-6 pb-8">
-                                    <p className="text-base lg:text-xl text-black font-britanica-regular pl-5 lg:pl-24">
+                                    <p className="text-base lg:text-xl text-white font-britanica-regular pl-5 lg:pl-24">
                                         {item.content}
                                     </p>
                                 </div>

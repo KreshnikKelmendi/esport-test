@@ -34,18 +34,18 @@ const GridBlog = () => {
     }, [viewMode]);
 
     return (
-        <div className="py-16 px-4 sm:px-6 lg:px-8 ">
+        <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#0a0829] to-[#050219]">
             <div className="mx-auto flex flex-col lg:flex-row gap-8">
                 {/* Main Content (75% width on large screens) */}
                 <div className="lg:w-[75%]">
                     <div className="mb-16">
-                        <span className="inline-block px-3 py-1 text-[12px] font-britanica-regular tracking-wider text-white uppercase rounded-full bg-[#050219] mb-4">
+                        <span className="inline-block px-3 py-1 text-[12px] font-britanica tracking-wider text-black uppercase rounded-full bg-[#FFB600] mb-4">
                             Latest news
                         </span>
-                        <h2 className="text-4xl font-britanica text-black mb-4">
+                        <h2 className="text-4xl font-britanica text-white mb-4">
                             Championship <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB600] to-[#3703FF]">News</span>
                         </h2>
-                        <p className="text-lg text-black max-w-3xl font-britanica-regular">
+                        <p className="text-lg text-white max-w-3xl font-britanica-regular">
                             The latest news, highlights, and insights from Europe&apos;s premier esports competition
                         </p>
 
@@ -112,7 +112,7 @@ const GridBlog = () => {
 
                                         {/* Author/CTA section */}
                                         <div className="flex items-center justify-between pt-3 border-t border-gray-800">
-                                            <Link href={`/blog/${post.id}`} className="text-white hover:text-[#4e5bfc] text-sm font-britanica-regular flex items-center transition-colors">
+                                            <Link href={`/blog/${post.id}`} className="text-[#FFB600] hover:text-[#4e5bfc] text-sm font-britanica-regular flex items-center transition-colors">
                                                 Read more
                                                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

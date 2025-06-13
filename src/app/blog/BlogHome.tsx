@@ -63,7 +63,7 @@ const BlogHome = () => {
   };
 
   return (
-    <div className="min-h-screen mx-auto px-4 lg:px-10 py-16 relative">
+    <div className="min-h-screen mx-auto px-4 lg:px-10 py-16 relative bg-gradient-to-r from-[#0a0829] to-[#050219]">
       {/* Content Container */}
       <div className="relative mx-auto">
         {/* Header */}
@@ -74,10 +74,10 @@ const BlogHome = () => {
             </span>
             <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#FFB600] to-transparent mt-2"></div>
           </div>
-          <p className="text-[3vh] md:text-5xl lg:text-5xl font-britanica mb-4 text-black">
+          <p className="text-[3vh] md:text-5xl lg:text-5xl font-britanica mb-4 text-white">
             CHAMPIONSHIP NEWS
           </p>
-          <p className="text-lg md:text-xl font-britanica-regular max-w-3xl mx-auto text-black">
+          <p className="text-lg md:text-xl font-britanica-regular max-w-3xl mx-auto text-white">
             The latest news, highlights, and insights from Europe&rsquo;s
             premier esports competition
           </p>
@@ -118,7 +118,7 @@ const BlogHome = () => {
                 {/* Title with Link */}
                 <Link href={`/blog/${post.id}`}>
                   <div className="p-4">
-                    <h3 className="text-black text-lg font-britanica hover:text-[#3703FF] transition-all duration-300">
+                    <h3 className="text-white text-lg font-britanica hover:text-[#3703FF] transition-all duration-300">
                       {post.title}
                     </h3>
                   </div>
@@ -130,7 +130,7 @@ const BlogHome = () => {
 
         {/* View All Button */}
         <div className="text-center mt-16">
-          <Link href="/blog" className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg font-britanica outline text-black rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white">
+          <Link href="/blog" className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg font-britanica outline text-white rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white">
             View All Articles
             <span className="ml-2 inline-block animate-bounce">↓</span>
           </Link>

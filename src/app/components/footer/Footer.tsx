@@ -32,13 +32,13 @@ const Footer = () => {
   const quickLinks = [
     { label: "Home", path: "/" },
     { label: "About Event", path: "/about-event" },
+     { label: "About FESK", path: "/about-fesk" },
     { label: "News", path: "/blog" },
     { label: "Sponsors", path: "/sponsors" },
-    { label: "About FESK", path: "/about-fesk" },
   ];
 
   return (
-    <footer className="bg-[#050219] text-white pb-10 relative overflow-hidden">
+    <footer className="bg-gradient-to-r from-[#0a0829] to-[#050219] text-white pb-10 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden ">
         <div className="absolute top-0 left-0 w-full h-full opacity-5">

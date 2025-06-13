@@ -102,13 +102,13 @@ const SecondBanner: React.FC = () => {
     return (
         <section
             ref={ref}
-            className="relative w-full min-h-screen overflow-hidden items-center"
+            className="relative w-full min-h-screen bg-gradient-to-r from-[#0a0829] to-[#050219] overflow-hidden items-center"
         >
             {/* Starry Background */}
             <div className="absolute inset-0 overflow-hidden">
                 {generateStars()}
                 {/* Aurora Effect */}
-                <div className="absolute inset-0 overflow-hidden">
+                {/* <div className="absolute inset-0 overflow-hidden">
                     <div className="absolute top-0 left-0 right-0 h-full opacity-30">
                         <div
                             className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-purple-600 blur-[90px]"
@@ -119,7 +119,7 @@ const SecondBanner: React.FC = () => {
                             style={{ animation: "float 12s infinite ease-in-out 4s" }}
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Content */}
@@ -133,7 +133,7 @@ const SecondBanner: React.FC = () => {
                     {/* Text Section */}
                     <div className="w-full lg:w-1/2 space-y-6 md:space-y-8">
                         <motion.h6
-                            className="text-base md:text-xl text-black tracking-[1.5px] font-britanica"
+                            className="text-base md:text-xl text-white tracking-[1.5px] font-britanica"
                             variants={itemVariants}
                         >
                             Pristina, Kosovo <br /> 
@@ -164,14 +164,14 @@ const SecondBanner: React.FC = () => {
                         </div>
 
                         <motion.p
-                            className="text-2xl lg:text-3xl font-britanica font-bold uppercase tracking-[3px] text-[#3703FF]"
+                            className="text-2xl lg:text-3xl font-britanica font-bold uppercase tracking-[3px] text-white"
                             variants={itemVariants}
                         >
                             European Esports <br />Championship 2025
                         </motion.p>
 
                         <motion.p
-                            className="text-sm md:text-lg text-black leading-[22px] font-britanica-regular max-w-[600px]"
+                            className="text-sm md:text-lg text-white leading-[22px] font-britanica-regular max-w-[600px]"
                             variants={itemVariants}
                         >
                             Step into the spotlight at one of the most electrifying esports events of the decade. Experience intense competition,
@@ -183,18 +183,18 @@ const SecondBanner: React.FC = () => {
                             variants={itemVariants}
                         >
                             <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
-                                <FaMapMarkerAlt className="text-[#3703FF] text-xl mr-3" />
+                                <FaMapMarkerAlt className="text-white text-xl mr-3" />
                                 <div>
-                                    <p className="text-xs font-britanica-regular text-[#050219]">VENUE</p>
-                                    <p className="text-[12px] tracking-[1px] font-britanica">Pristina Olympic Stadium</p>
+                                    <p className="text-xs font-britanica-regular text-white">VENUE</p>
+                                    <p className="text-[12px] text-white tracking-[1px] font-britanica">Pristina Olympic Stadium</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center backdrop-blur-sm p-3 rounded-lg">
-                                <FaCalendarAlt className="text-[#3703FF] text-xl mr-3" />
+                                <FaCalendarAlt className="text-white text-xl mr-3" />
                                 <div>
-                                    <p className="text-xs font-britanica-regular text-[#050219]">DATE</p>
-                                    <p className="text-[12px] tracking-[1px] font-britanica">July 09 – 13, 2025</p>
+                                    <p className="text-xs font-britanica-regular text-white">DATE</p>
+                                    <p className="text-[12px] text-white tracking-[1px] font-britanica">July 09 – 13, 2025</p>
                                 </div>
                             </div>
 
@@ -207,21 +207,21 @@ const SecondBanner: React.FC = () => {
                             </div> */}
 
                             <div className="flex items-start backdrop-blur-sm p-3 rounded-lg">
-                                <FaGamepad className="text-[#3703FF] text-xl mr-3 mt-1" />
+                                <FaGamepad className="text-white text-xl mr-3 mt-1" />
                                 <div className="w-full">
-                                    <p className="text-xs font-britanica-regular text-[#050219]">TOURNAMENTS</p>
+                                    <p className="text-xs font-britanica-regular text-white">TOURNAMENTS</p>
                                     <div className="grid grid-cols-1 gap-3 mt-2">
                                         {games.map((game, index) => (
                                             <div key={index} className="flex justify-between items-center">
                                                 <div className="flex items-center gap-3">
                                                     <span className={`${game.color}`}>{game.icon}</span>
-                                                    <span className="text-[12px] tracking-[1px] font-britanica">
+                                                    <span className="text-[12px] text-white tracking-[1px] font-britanica">
                                                         {game.name}
                                                     </span>
                                                 </div>
                                                 <div className="flex items-center gap-2 bg-black/10 px-3 py-1 rounded-full">
-                                                    <FaUsers className="text-xs text-gray-600" />
-                                                    <span className="text-[11px] tracking-[0.5px] w-28 flex justify-center items-center font-britanica-regular">
+                                                    <FaUsers className="text-xs text-white" />
+                                                    <span className="text-[11px] text-white tracking-[0.5px] w-28 flex justify-center items-center font-britanica-regular">
                                                         {game.teams}
                                                     </span>
                                                 </div>
@@ -235,7 +235,7 @@ const SecondBanner: React.FC = () => {
                         <motion.div className="pt-4" variants={itemVariants}>
                             <Link
                                 href="/about-event"
-                                className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg font-britanica outline text-black rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white"
+                                className="inline-block px-8 py-3 md:px-10 md:py-4 text-lg font-britanica outline text-white rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white"
                             >
                                 Learn More
                             </Link>

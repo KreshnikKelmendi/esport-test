@@ -36,7 +36,7 @@ const Visit = () => {
 };
 
   return (
-    <section className="mx-auto relative px-5 lg:px-10 py-12 md:py-20">
+    <section className="mx-auto relative px-5 lg:px-10 py-12 md:py-20 bg-gradient-to-r from-[#0a0829] to-[#050219]">
         <div className="absolute inset-0 overflow-hidden">
                 {generateStars()}
 
@@ -48,7 +48,7 @@ const Visit = () => {
                             style={{ animation: "float 15s infinite ease-in-out" }}
                         /> */}
                         <div
-                            className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-purple-600 blur-[90px]"
+                            className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-blue-600 blur-[90px]"
                             style={{ animation: "float 18s infinite ease-in-out 2s" }}
                         />
                         <div
@@ -65,7 +65,7 @@ const Visit = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-4xl md:text-4xl font-britanica-regular font-bold mb-6 text-gray-900"
+            className="text-2xl sm:text-4xl md:text-4xl font-britanica-regular font-bold mb-6 text-white"
           >
             Discover Our Beautiful <br />
             <motion.span
@@ -87,7 +87,7 @@ const Visit = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-base md:text-base mb-6 font-britanica-regular"
+            className="text-base md:text-base mb-6 font-britanica-regular text-white"
           >
             Experience the perfect blend of nature and comfort in our stunning location. 
             Whether you&apos;re looking for adventure or relaxation, we&apos;ve got something for everyone.
@@ -97,7 +97,7 @@ const Visit = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-base md:text-base font-britanica-regular mb-8"
+            className="text-base text-white md:text-base font-britanica-regular mb-8"
           >
             Our facilities are designed to provide you with an unforgettable experience,
             surrounded by breathtaking views and exceptional service.
@@ -108,7 +108,7 @@ const Visit = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="inline-block cursor-pointer px-8 py-3 z-50 md:px-10 md:py-4 text-lg font-britanica outline text-black rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white w-fit"
+            className="inline-block cursor-pointer px-8 py-3 z-50 md:px-10 md:py-4 text-lg font-britanica outline text-white rounded-lg bg-gradient-to-r from-blue-700 to-yellow-500 bg-[length:0%_100%] hover:bg-[length:100%_100%] bg-no-repeat transition-all duration-500 transform hover:scale-105 shadow-lg hover:shadow-blue-500/30 hover:text-white w-fit"
           >
             Discover More
           </motion.button>

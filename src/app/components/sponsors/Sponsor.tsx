@@ -92,7 +92,7 @@ const Sponsor = () => {
   return (
     <section 
       ref={ref}
-      className="w-full relative pt-6 pb-12 md:pt-24 md:pb-24 overflow-hidden mt-16 lg:mt-32 bg-[#050219]"
+      className="w-full relative pt-6 pb-12 md:pt-32 md:pb-32 overflow-hidden bg-gradient-to-r from-[#0a0829] to-[#050219]"
     >
       <div className="mx-auto relative z-10">
         {/* "In Partnership With" section */}
