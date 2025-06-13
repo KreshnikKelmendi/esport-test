@@ -1,14 +1,15 @@
 'use client'
 
 import { motion, useMotionValue, useTransform, useSpring, useAnimation } from 'framer-motion';
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Header from '../header/Header';
 import Countdown from '../hero/CountDown';
 
 const ThirdBanner = () => {
     // Mouse position state
     const [isHovered, setIsHovered] = useState(false);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+    // The following line is not needed and can be removed to fix the ESLint warning:
+    // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const glowControls = useAnimation();
 
     // Motion values for smooth animation
@@ -33,7 +34,7 @@ const ThirdBanner = () => {
         const x = clientX - (left + width / 2);
         const y = clientY - (top + height / 2);
         
-        setMousePosition({ x: clientX - left, y: clientY - top });
+        // Removed: setMousePosition({ x: clientX - left, y: clientY - top });
         mouseX.set(x);
         mouseY.set(y);
 
