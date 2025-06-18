@@ -85,7 +85,7 @@ const Countdown = () => {
       </motion.p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
-        {Object.entries(timeLeft).map(([unit, value], index) => (
+        {Object.entries(timeLeft).map(([unit, value]) => (
           <motion.div
             key={unit}
             className="relative group"

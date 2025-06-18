@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react'
 import Header from '../header/Header';
 import Countdown from '../hero/CountDown';
+import Image from 'next/image';
 
 const ThirdBanner = () => {
     // Animation variants
@@ -66,10 +67,13 @@ const ThirdBanner = () => {
 
             {/* Helmet as background for mobile */}
             <div className="absolute inset-0 w-full h-full block md:hidden z-0">
-                <img 
-                    src="/assets/banner/helmet.png" 
-                    alt="Esports Helmet Background" 
-                    className="w-full h-full object-cover object-center "
+                <Image
+                    src="/assets/banner/helmet.png"
+                    alt="Esports Helmet Background"
+                    className="w-full h-full object-cover object-center"
+                    width={800}
+                    height={800}
+                    priority
                 />
                 {/* Optional: dark overlay for better text contrast */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0a0829] to-[#050219] opacity-90" />
@@ -139,10 +143,13 @@ const ThirdBanner = () => {
                                 perspective: 1200,
                             }}
                         >
-                            <img 
-                                src="/assets/banner/helmet.png" 
-                                alt="Esports Helmet" 
+                            <Image
+                                src="/assets/banner/helmet.png"
+                                alt="Esports Helmet"
                                 className="w-full h-full lg:h-screen object-cover"
+                                width={800}
+                                height={800}
+                                priority
                             />
                         </motion.div>
                     </motion.div>
