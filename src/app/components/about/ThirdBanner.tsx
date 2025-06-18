@@ -1,85 +1,11 @@
 'use client'
 
-import { motion, useMotionValue, useTransform, useSpring, useAnimation } from 'framer-motion';
-import React, { useState } from 'react'
+import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react'
 import Header from '../header/Header';
 import Countdown from '../hero/CountDown';
 
 const ThirdBanner = () => {
-    // Mouse position state
-    const [isHovered, setIsHovered] = useState(false);
-    // The following line is not needed and can be removed to fix the ESLint warning:
-    // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const glowControls = useAnimation();
-
-    // Motion values for smooth animation
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    // Transform mouse position to rotation values
-    const rotateX = useTransform(mouseY, [-300, 300], [15, -15]);
-    const rotateY = useTransform(mouseX, [-300, 300], [-15, 15]);
-
-    // Spring animation for smoother movement
-    const springConfig = { damping: 20, stiffness: 100 };
-    const springRotateX = useSpring(rotateX, springConfig);
-    const springRotateY = useSpring(rotateY, springConfig);
-
-    // Handle mouse movement with smooth dragging effect
-    const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-        const { clientX, clientY } = event;
-        const { left, top, width, height } = event.currentTarget.getBoundingClientRect();
-        
-        // Calculate mouse position relative to the center of the element
-        const x = clientX - (left + width / 2);
-        const y = clientY - (top + height / 2);
-        
-        // Removed: setMousePosition({ x: clientX - left, y: clientY - top });
-        mouseX.set(x);
-        mouseY.set(y);
-
-        // Animate glow with smooth dragging effect
-        glowControls.start({
-            x: clientX - left - 250,
-            y: clientY - top - 250,
-            transition: {
-                type: "spring",
-                damping: 15,
-                stiffness: 100,
-                mass: 1,
-                velocity: 0.5
-            }
-        });
-    };
-
-    // Reset position when mouse leaves
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-        mouseX.set(0);
-        mouseY.set(0);
-        glowControls.start({
-            scale: 0,
-            opacity: 0,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        });
-    };
-
-    // Handle mouse enter
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-        glowControls.start({
-            scale: 1,
-            opacity: 1,
-            transition: {
-                duration: 0.5,
-                ease: "easeOut"
-            }
-        });
-    };
-
     // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -104,38 +30,33 @@ const ThirdBanner = () => {
         }
     };
 
+    // Fix hydration: generate floating particle styles on client only
+    const [particleStyles, setParticleStyles] = useState<{width: string, height: string, left: string, top: string, xAnim: number[], duration: number}[]>([]);
+    useEffect(() => {
+        setParticleStyles(
+            Array.from({ length: 15 }).map(() => {
+                const width = Math.random() * 10 + 5 + 'px';
+                const height = Math.random() * 10 + 5 + 'px';
+                const left = Math.random() * 100 + '%';
+                const top = Math.random() * 100 + '%';
+                const xAnim = Math.random() > 0.5 ? [0, 10] : [0, -10];
+                const duration = Math.random() * 10 + 10;
+                return { width, height, left, top, xAnim, duration };
+            })
+        );
+    }, []);
+
     return (
         <div 
             className="min-h-screen bg-gradient-to-r from-[#0a0829] to-[#050219] text-white relative overflow-hidden"
-            onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
         >
             <Header />
             
-            {/* Smooth Dragging Glow Effect */}
-            <motion.div
-                className="pointer-events-none fixed w-[600px] h-[600px] rounded-full"
-                animate={glowControls}
-                initial={{ scale: 0, opacity: 0 }}
-                style={{
-                    zIndex: 1,
-                    background: "radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 70%)",
-                    filter: "blur(80px)",
-                }}
-            />
-
             {/* 3D Animated Background */}
             <motion.div
-                className="absolute firstServiceImage inset-0 bg-[url('/assets/banner/Ushtari.png')] bg-cover bg-center opacity-30"
-                style={{
-                    rotateX: springRotateX,
-                    rotateY: springRotateY,
-                    transformStyle: "preserve-3d",
-                    perspective: 1000,
-                }}
+                className="absolute firstServiceImage inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-30"
                 animate={{
-                    scale: isHovered ? 1.1 : 1,
+                    scale: 1,
                 }}
                 transition={{
                     duration: 0.5,
@@ -143,53 +64,101 @@ const ThirdBanner = () => {
                 }}
             />
 
-            {/* Additional Glow Effects */}
+            {/* Helmet as background for mobile */}
+            <div className="absolute inset-0 w-full h-full block md:hidden z-0">
+                <img 
+                    src="/assets/banner/helmet.png" 
+                    alt="Esports Helmet Background" 
+                    className="w-full h-full object-cover object-center "
+                />
+                {/* Optional: dark overlay for better text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0a0829] to-[#050219] opacity-90" />
+            </div>
+
+            {/* Content */}
             <motion.div
-                className="absolute inset-0 overflow-hidden"
                 initial="hidden"
-                animate="visible"
-                variants={{
-                    hidden: { opacity: 0 },
-                    visible: { opacity: 1 }
-                }}
+                animate="show"
+                variants={containerVariants}
+                className="relative z-10 px-2 sm:px-4 md:px-6 lg:px-10 mx-auto min-h-screen flex flex-col items-center justify-center text-center pt-8 sm:pt-10 md:pt-[15vh] lg:pt-[5vh] md:block md:min-h-0 md:text-left md:items-start md:justify-start"
             >
-                <motion.div
-                    className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full bg-blue-500/20 blur-[100px]"
-                    animate={{
-                        x: [-100, 100, -100],
-                        y: [-50, 50, -50],
-                    }}
-                    transition={{
-                        duration: 15,
-                        repeat: Infinity,
-                        ease: "linear"
-                    }}
-                />
-                <motion.div
-                    className="absolute top-1/3 left-1/3 w-[200px] h-[200px] rounded-full bg-purple-500/20 blur-[80px]"
-                    animate={{
-                        x: [0, 150, 0],
-                        y: [0, -100, 0],
-                    }}
-                    transition={{
-                        duration: 12,
-                        repeat: Infinity,
-                        ease: "linear",
-                        delay: 2
-                    }}
-                />
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between lg:gap-16 w-full">
+                    {/* Text Content - Left Side */}
+                    <motion.div variants={itemVariants} className="w-full lg:w-1/2 pt-4 sm:pt-8 md:pt-0 lg:pt-20">
+                        <motion.div variants={itemVariants} className="mb-6 sm:mb-8">
+                            <span className="inline-block text-lg sm:text-2xl md:text-sm tracking-widest text-neutral-200 font-britanica-regular">
+                                JULY <b className='text-2xl sm:text-4xl md:text-2xl'>9 - 13</b>, 2025 <br /> PRISTINA
+                            </span>
+                        </motion.div>
+                        <motion.h1
+                            variants={itemVariants}
+                            className="text-5xl sm:text-6xl md:text-5xl lg:text-7xl font-bold font-britanica mb-8 sm:mb-10 leading-tight drop-shadow-lg"
+                        >
+                            <motion.span
+                                animate={{
+                                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                                }}
+                                transition={{
+                                    duration: 5,
+                                    ease: 'linear',
+                                    repeat: Infinity,
+                                }}
+                                className="inline-block bg-gradient-to-r from-[#5E65EF] via-[#FFB600] to-[#050219] bg-[length:200%_200%] bg-[position:0%_50%] font-britanica font-extrabold tracking-[1px] text-3xl sm:text-5xl md:text-6xl leading-tight text-transparent bg-clip-text"
+                            >
+                                EUROPEAN ESPORTS CHAMPIONSHIP <br />2025
+                            </motion.span>
+                        </motion.h1>
+
+                        <div className="mt-8 sm:mt-10 text-2xl sm:text-4xl">
+                            <Countdown />
+                        </div>
+                    </motion.div>
+
+                    {/* Helmet Image - Right Side (desktop only) */}
+                    <motion.div 
+                        variants={itemVariants} 
+                        className="w-full lg:w-1/2 justify-center items-center mt-6 sm:mt-8 lg:mt-0 lg:h-screen h-full hidden md:flex"
+                    >
+                        <motion.div
+                            className="relative w-40 sm:w-64 md:w-full max-w-xs sm:max-w-md lg:w-full lg:h-screen flex items-center justify-center mx-auto"
+                            animate={{
+                                rotateY: [0, 15, 0, -15, 0],
+                                rotateX: [0, 8, 0, -8, 0],
+                                x: [-20, 20, -20],
+                                y: [0, -15, 0, 15, 0],
+                                scale: [1, 1.05, 1, 1.05, 1],
+                            }}
+                            transition={{
+                                duration: 12,
+                                ease: "easeInOut",
+                                repeat: Infinity,
+                                repeatType: "reverse"
+                            }}
+                            style={{
+                                transformStyle: "preserve-3d",
+                                perspective: 1200,
+                            }}
+                        >
+                            <img 
+                                src="/assets/banner/helmet.png" 
+                                alt="Esports Helmet" 
+                                className="w-full h-full lg:h-screen object-cover"
+                            />
+                        </motion.div>
+                    </motion.div>
+                </div>
             </motion.div>
 
             {/* Floating Particles */}
-            {Array.from({ length: 15 }).map((_, i) => (
+            {particleStyles.map((style, i) => (
                 <motion.div
                     key={i}
                     className="absolute rounded-full bg-blue-500/20"
                     style={{
-                        width: Math.random() * 10 + 5 + 'px',
-                        height: Math.random() * 10 + 5 + 'px',
-                        left: Math.random() * 100 + '%',
-                        top: Math.random() * 100 + '%',
+                        width: style.width,
+                        height: style.height,
+                        left: style.left,
+                        top: style.top,
                     }}
                     initial={{
                         y: 0,
@@ -198,51 +167,15 @@ const ThirdBanner = () => {
                     animate={{
                         y: [0, -50, 0],
                         opacity: [0, 0.5, 0],
-                        x: Math.random() > 0.5 ? [0, 10] : [0, -10]
+                        x: style.xAnim
                     }}
                     transition={{
-                        duration: Math.random() * 10 + 10,
+                        duration: style.duration,
                         repeat: Infinity,
                         ease: "linear"
                     }}
                 />
             ))}
-
-            {/* Content */}
-            <motion.div
-                initial="hidden"
-                animate="show"
-                variants={containerVariants}
-                className="relative z-10 text-center px-6 mx-auto pt-[20vh] md:pt-[45vh] lg:pt-[10vh]"
-            >
-                <motion.div variants={itemVariants} className="mb-8">
-                    <span className="inline-block text-sm tracking-widest text-neutral-400 font-britanica-regular">
-                        JULY <b className='text-2xl'>9 - 13</b>, 2025 <br /> PRISTINA
-                    </span>
-                </motion.div>
-                <motion.h1
-                    variants={itemVariants}
-                    className="text-5xl md:text-7xl lg:text-7xl font-bold font-britanica mb-12 leading-tight"
-                >
-                    <motion.span
-                        animate={{
-                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
-                        }}
-                        transition={{
-                            duration: 5,
-                            ease: 'linear',
-                            repeat: Infinity,
-                        }}
-                        className="inline-block bg-gradient-to-r from-[#5E65EF] via-[#FFB600] to-[#050219] bg-[length:200%_200%] bg-[position:0%_50%] font-britanica font-extrabold tracking-[1px] text-xl lg:text-[10vh] leading-tight text-transparent bg-clip-text"
-                    >
-                        EUROPEAN ESPORTS CHAMPIONSHIP <br />2025
-                    </motion.span>
-                </motion.h1>
-
-                <div className="mt-12">
-                    <Countdown />
-                </div>
-            </motion.div>
         </div>
     )
 }

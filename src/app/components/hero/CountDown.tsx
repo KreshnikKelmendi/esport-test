@@ -57,43 +57,67 @@ const Countdown = () => {
     }
   };
 
+  const numberVariants = {
+    hidden: { scale: 0.5, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 15
+      }
+    }
+  };
+
   return (
     <motion.div
-      className="w-full max-w-4xl mx-auto px-4 "
+      className="w-full max-w-5xl mx-auto"
       initial="hidden"
       animate="visible"
       variants={countdownVariants}
     >
-      {/* <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-4xl uppercase font-britanica-regular text-white mb-4">
-          Countdown to <span className='text-3xl lg:text-6xl bg-clip-text text-transparent font-britanica bg-gradient-to-r from-[#FFB600] to-[#5E65EF]'>Championship</span>
-        </h2>
-        <p className="text-white text-sm lg:text-lg font-britanica-regular">
-        The European Esports Championship begins on July 9 - 13, 2025 in Pristina
-        </p>
-      </div> */}
-      <p className='font-britanica-regular text-white text-sm'>Countdown to Championship</p>
+      <motion.p 
+        className='font-britanica-regular text-white/80 text-sm lg:text-base mb-6 tracking-wider'
+        variants={itemVariants}
+      >
+        COUNTDOWN TO CHAMPIONSHIP
+      </motion.p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-        {Object.entries(timeLeft).map(([unit, value]) => (
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 lg:gap-6">
+        {Object.entries(timeLeft).map(([unit, value], index) => (
           <motion.div
             key={unit}
-            className="rounded-xl p-6 text-center"
+            className="relative group"
             variants={itemVariants}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ 
+              scale: 1.05,
+              transition: { duration: 0.2 }
+            }}
           >
-            <div className="text-4xl md:text-6xl font-britanica bg-clip-text text-transparent bg-gradient-to-r from-[#FFB600] to-[#3703FF] mb-2">
-              {value.toString().padStart(2, '0')}
-            </div>
-            <div className="text-sm md:text-base uppercase font-britanica-regular tracking-wider text-white">
-              {unit}
+            {/* Glassmorphism background */}
+            <div className="absolute inset-0  backdrop-blur-sm rounded-2xl transition-all duration-300" />
+            
+            {/* Glow effect */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl opacity-0 transition-opacity duration-300 blur-sm" />
+            
+            <div className="relative p-3 md:p-4 lg:p-6 text-center">
+              <motion.div 
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-britanica font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#FFB600] via-[#FFD700] to-[#FFA500] mb-1 md:mb-2"
+                variants={numberVariants}
+                key={value} // Force re-animation when value changes
+                initial="hidden"
+                animate="visible"
+              >
+                {value.toString().padStart(2, '0')}
+              </motion.div>
+              <div className="text-xs sm:text-xs md:text-sm lg:text-base uppercase font-britanica-regular tracking-wider text-white/70 group-hover:text-white/90 transition-colors duration-300">
+                {unit}
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
-
-      {/* Progress bar */}
-
 
       <style jsx global>{`
         .countdown-item {
