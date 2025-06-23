@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Footer from '../footer/Footer';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 
 const Pristina = () => {
     const attractions = [
@@ -106,16 +105,6 @@ const Pristina = () => {
     }, [controls, inView]);
 
     // Animation variants
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2
-            }
-        }
-    };
-
     const itemVariants = {
         hidden: { y: 20, opacity: 0 },
         visible: {
@@ -347,7 +336,7 @@ const Pristina = () => {
                             variants={fadeInUp}
                         >
                             <h2 className="text-3xl md:text-4xl font-britanica font-bold text-white mb-4 drop-shadow">Traditional Food</h2>
-                            <p className="text-white/70 max-w-2xl mx-auto font-britanica-regular text-lg">Kosovo's cuisine is a delicious blend of Balkan and Mediterranean flavors. You can find these delicious dishes in restaurants and bakeries all across the city. Don't miss these local favorites!</p>
+                            <p className="text-white/70 max-w-2xl mx-auto font-britanica-regular text-lg">Kosovo&apos;s cuisine is a delicious blend of Balkan and Mediterranean flavors. You can find these delicious dishes in restaurants and bakeries all across the city. Don&apos;t miss these local favorites!</p>
                         </motion.div>
                         <motion.div
                             className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto"
