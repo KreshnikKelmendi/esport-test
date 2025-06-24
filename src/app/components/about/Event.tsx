@@ -188,7 +188,7 @@ const Event = () => {
                                 {/* Video instead of Image */}
                                 <video
                                     ref={videoRef}
-                                    src="/assets/about/venue-esports.MP4"
+                                    src="/assets/about/venue-esports.mp4"
                                     className="w-full h-[400px] lg:h-[700px] object-cover"
                                     width={1000}
                                     height={1000}
