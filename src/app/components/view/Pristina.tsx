@@ -36,7 +36,7 @@ const Pristina = () => {
             name: "Germia Park",
             description: "Germia is Pristina's beloved green oasis—a vast park and nature reserve on the city's edge. Locals and visitors flock here for hiking, cycling, picnics, and the region's largest outdoor swimming pool. The rolling hills and pine forests offer a peaceful escape from urban life.",
             highlight: "Don't miss a summer swim in the iconic Germia pool",
-            image: "/assets/pristina/Parku_Nacional_i_Gërmisë_Prishtinë.jpg",
+            image: "/assets/pristina/Parku_Nacional_i_Gërmisë_Prishtinë.png",
             alt: "Germia Park in Pristina"
         },
       
