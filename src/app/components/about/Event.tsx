@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Event2 from './Event2';
+import { FiVolumeX, FiVolume2 } from 'react-icons/fi';
 
 
 const Event = () => {
@@ -31,6 +32,17 @@ const Event = () => {
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1]
             }
+        }
+    };
+
+    // Video controls state
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [isMuted, setIsMuted] = useState(true);
+
+    const handleMuteUnmute = () => {
+        if (videoRef.current) {
+            videoRef.current.muted = !videoRef.current.muted;
+            setIsMuted(videoRef.current.muted);
         }
     };
 
@@ -163,7 +175,7 @@ const Event = () => {
                         className="md:col-span-7 lg:col-span-12"
                     >
                         <span className="text-base text-neutral-400 mb-4 block font-britanica-regular">VENUE</span>
-                        <h2 className="text-3xl md:text-4xl font-britanica mb-6">Pristina Olympic Stadium</h2>
+                        <h2 className="text-3xl md:text-4xl font-britanica mb-6">1 Tetori Hale, Pristina, Kosovo</h2>
 
                         {/* Bento Grid Container - Responsive adjustments */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-3 gap-3">
@@ -173,15 +185,31 @@ const Event = () => {
                                 whileHover={{ scale: 1 }}
                                 transition={{ duration: 0.3 }}
                             >
-                                <Image
-                                    src="/assets/about/arena2.jpg"
-                                    alt="Stadium"
-                                    className="w-full h-full object-cover"
-                                    width={'1000'}
-                                    height={'1000'}
+                                {/* Video instead of Image */}
+                                <video
+                                    ref={videoRef}
+                                    src="/assets/about/venue-esports.MP4"
+                                    className="w-full h-[400px] lg:h-[700px] object-cover"
+                                    width={1000}
+                                    height={1000}
+                                    muted={isMuted}
+                                    autoPlay
+                                    loop
+                                    playsInline
+                                    style={{ background: '#000' }}
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                                <div className="absolute bottom-4 left-4">
+                                {/* Mute/Unmute Control */}
+                                <div className="absolute bottom-4 left-4 flex gap-2 z-20">
+                                    <button
+                                        onClick={handleMuteUnmute}
+                                        className="p-2 bg-black/60 text-white rounded-full border border-white/10 hover:bg-black/80 transition flex items-center justify-center text-xl"
+                                        aria-label={isMuted ? 'Unmute video' : 'Mute video'}
+                                    >
+                                        {isMuted ? <FiVolumeX /> : <FiVolume2 />}
+                                    </button>
+                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
+                                <div className="absolute bottom-4 right-4">
                                     <div className="flex items-center gap-2 px-3 py-1.5 bg-black/50 backdrop-blur-sm rounded-full border border-white/10">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
