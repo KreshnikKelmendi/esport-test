@@ -53,7 +53,7 @@ const Event2 = () => {
                                 </h2>
                                 <p className="text-gray-300 leading-relaxed font-britanica-regular">
                                     The IESF European Esports Championship 2025 will be hosted in
-                                    Pristina, Kosovo, from 9–13 July. This tournament will bring
+                                    Prishtina, Kosova, from 9–13 July. This tournament will bring
                                     together 180 esports athletes from across Europe, competing in
                                     some of the world&apos;s most popular game titles.
                                 </p>
@@ -117,7 +117,7 @@ const Event2 = () => {
                                         <h3 className="text-sm font-britanica text-[#FFB600] uppercase tracking-wider">
                                             Location
                                         </h3>
-                                        <p className="text-white font-britanica-regular">Pristina, Kosovo</p>
+                                        <p className="text-white font-britanica-regular">Prishtina, Kosova</p>
                                     </div>
                                     <div className="bg-gradient-to-br from-[#050219] to-blue-950/70 p-4 rounded-lg">
                                         <h3 className="text-sm font-britanica text-[#FFB600] uppercase tracking-wider">

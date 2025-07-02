@@ -135,7 +135,7 @@ const Event = () => {
                     className="relative z-10 text-center px-6 mx-auto"
                 >
                     <motion.div variants={item}>
-                        <span className="inline-block text-sm tracking-widest text-neutral-400 mb-6 font-britanica-regular">JULY <b className='text-2xl'>9 - 13</b>, 2025 <br /> PRISTINA</span>
+                        <span className="inline-block text-sm tracking-widest text-neutral-400 mb-6 font-britanica-regular">JULY <b className='text-2xl'>9 - 13</b>, 2025 <br /> PRISHTINA</span>
                     </motion.div>
                     <motion.h1
                         variants={item}
@@ -175,7 +175,7 @@ const Event = () => {
                         className="md:col-span-7 lg:col-span-12"
                     >
                         <span className="text-base text-neutral-400 mb-4 block font-britanica-regular">VENUE</span>
-                        <h2 className="text-3xl md:text-4xl font-britanica mb-6">1 Tetori Hale, Pristina, Kosovo</h2>
+                        <h2 className="text-3xl md:text-4xl font-britanica mb-6">1 Tetori Hall, Prishtina, Kosova</h2>
 
                         {/* Bento Grid Container - Responsive adjustments */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-3 gap-3">
@@ -188,7 +188,7 @@ const Event = () => {
                                 {/* Video instead of Image */}
                                 <video
                                     ref={videoRef}
-                                    src="/assets/about/venue-esports.mp4"
+                                    src="/assets/about/venue-esport-2.mp4"
                                     className="w-full h-[400px] lg:h-[700px] object-cover"
                                     width={1000}
                                     height={1000}
@@ -215,7 +215,7 @@ const Event = () => {
                                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                             <circle cx="12" cy="10" r="3"></circle>
                                         </svg>
-                                        <span className="text-xs sm:text-sm font-britanica-regular">1 Tetori Hale, Pristina, Kosovo</span>
+                                        <span className="text-xs sm:text-sm font-britanica-regular">1 Tetori Hall, Prishtina, Kosova</span>
                                     </div>
                                 </div>
                             </motion.div>
@@ -247,7 +247,7 @@ const Event = () => {
                                 whileHover={{ y: -3 }}
                             >
                                 <div className="text-white text-base font-britanica-regular">STADIUM CAPACITY</div>
-                                <div className="text-5xl text-[#FFB600] sm:text-5xl 2xl:text-7xl font-bold font-britanica">5,000+</div>
+                                <div className="text-5xl text-[#FFB600] sm:text-5xl 2xl:text-7xl font-bold font-britanica">3,500+</div>
 
                                 <div className="text-[12px] text-white text-left border-t border-blue-900/50 py-2 font-britanica-regular">
                                     Expandable for special events with 360° seating providing optimal viewing angles from every position.

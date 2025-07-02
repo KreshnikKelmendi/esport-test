@@ -136,7 +136,7 @@ const SecondBanner: React.FC = () => {
                             className="text-base md:text-xl text-white tracking-[1.5px] font-britanica"
                             variants={itemVariants}
                         >
-                            Pristina, Kosovo <br /> 
+                            Prishtina, Kosova <br /> 
                             <motion.span
                                 animate={{
                                     backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
@@ -186,7 +186,7 @@ const SecondBanner: React.FC = () => {
                                 <FaMapMarkerAlt className="text-white text-xl mr-3" />
                                 <div>
                                     <p className="text-xs font-britanica-regular text-white">VENUE</p>
-                                    <p className="text-[12px] text-white tracking-[1px] font-britanica">Pristina Olympic Stadium</p>
+                                    <p className="text-[12px] text-white tracking-[1px] font-britanica">1 Tetori Hall, Prishtina</p>
                                 </div>
                             </div>
 

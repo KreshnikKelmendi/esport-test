@@ -18,25 +18,27 @@ interface SponsorCategoryProps {
 
 const sponsorsData: Record<string, Sponsor[]> = {
     'In Partnership With': [
-        { name: 'Tech Giant Inc', logo: '/assets/sponsors/iesf-1.png', url: '#' },
-        { name: 'Global Solutions', logo: '/assets/sponsors/esf.png', url: '#' },
-        { name: 'Global Solutions', logo: '/assets/sponsors/FESK-1.png', url: '#' },
+        { name: 'IESF', logo: '/assets/sponsors/iesf-1.png', url: '#' },
+        { name: 'ESF', logo: '/assets/sponsors/esf.png', url: '#' },
+        { name: 'FESK', logo: '/assets/sponsors/FESK-1.png', url: '#' },
+        { name: 'MKRS', logo: '/assets/sponsors/mkrs.png', url: '#' },
+
     ],
-    'Gold Sponsors': [
-        { name: 'Innovate Corp', logo: '/assets/sponsors/trekuartista-logo.png', url: '#' },
-        { name: 'Future Labs', logo: '/assets/sponsors/dea-2.png', url: '#' },
-        { name: 'Digital Horizon', logo: '/assets/sponsors/trekuartista-logo.png', url: '#' },
+    'Gold Sponsor': [
+        { name: 'Raiffeisen Bank', logo: '/assets/sponsors/gold-08.png', url: '#' },
     ],
-    'Silver Sponsors': [
-        { name: 'Web Masters', logo: '/images/silver1.png', url: '#' },
-        { name: 'Cloud Partners', logo: '/images/silver2.png', url: '#' },
-        { name: 'Data Systems', logo: '/images/silver3.png', url: '#' },
-        { name: 'Code Factory', logo: '/images/silver4.png', url: '#' },
+    'Sponsors': [
+        { name: 'RedBull', logo: '/assets/sponsors/redbull.png', url: '#' },
+        { name: 'Emerald hotel', logo: '/assets/sponsors/emerald-hotel.png', url: '#' },
+        { name: 'Gjirafa50', logo: '/assets/sponsors/gjirafa.png', url: '#' },
+        { name: 'EvroTarget', logo: '/assets/sponsors/evrotarget.png', url: '#' },
+        { name: 'KIKxxl', logo: '/assets/sponsors/xxl.png', url: '#' },
+        { name: 'telkos', logo: '/assets/sponsors/telkos.png', url: '#' },
     ],
-    'Media Partners': [
-        { name: 'Dev Community', logo: '/images/partner1.png', url: '#' },
-        { name: 'Open Source Org', logo: '/images/partner2.png', url: '#' },
-    ],
+    // 'Media Partners': [
+    //     { name: 'Dev Community', logo: '/images/partner1.png', url: '#' },
+    //     { name: 'Open Source Org', logo: '/images/partner2.png', url: '#' },
+    // ],
 };
 
 const AllSponsors: React.FC = () => {
@@ -90,18 +92,18 @@ const SponsorCategory: React.FC<SponsorCategoryProps> = ({ category, sponsors, d
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
     const getGridClass = () => {
-        if (sponsors.length === 1) return 'grid-cols-1 max-w-xs mx-auto';
-        if (sponsors.length === 2) return 'grid-cols-1 md:grid-cols-2 max-w-2xl mx-auto gap-12';
-        if (sponsors.length === 3) return 'grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto gap-10';
-        return 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8';
+        if (sponsors.length === 1) return 'grid-cols-1 max-w-md mx-auto';
+        if (sponsors.length === 2) return 'grid-cols-1 md:grid-cols-2 max-w-3xl mx-auto gap-16';
+        if (sponsors.length === 3) return 'grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto gap-14';
+        return 'grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12';
     };
 
     const getSponsorSize = () => {
-        if (category.includes('In Partnership')) return 'h-36 p-16';
-        if (category.includes('Gold')) return 'h-36 p-10';
-        if (category.includes('Silver')) return 'h-32 p-5';
-        if (category.includes('Media')) return 'h-24 p-4';
-        return 'h-24 p-4';
+        if (category.includes('In Partnership')) return 'h-52 p-2 lg:p-10';
+        if (category.includes('Gold')) return 'h-48 lg:p-8';
+        if (category.includes('Silver')) return 'h-44 p-7';
+        if (category.includes('Media')) return 'h-40 p-6';
+        return 'h-40 lg:p-6';
     };
 
     return (
@@ -116,13 +118,13 @@ const SponsorCategory: React.FC<SponsorCategoryProps> = ({ category, sponsors, d
                 <div className="w-64 h-64 bg-purple-900 rounded-full filter blur-3xl opacity-20"></div>
             </div>
 
-            <h3 className="text-xl md:text-2xl font-britanica mb-12 text-center">
+            <h3 className="text-lg md:text-xl font-britanica mb-10 text-center tracking-wide uppercase">
                 <span className="relative inline-block">
-                    <span className="relative z-10 px-4 py-2 text-white">
+                    <span className="relative z-10 px-2 py-1 text-white">
                         {category}
                     </span>
                     <motion.span
-                        className="absolute left-0 w-full h-[2px] bottom-[-10px] bg-gradient-to-r from-[#050219] via-[#5E65EF] to-[#FFB600]"
+                        className="absolute left-0 w-full h-[2px] bottom-[-6px] bg-gradient-to-r from-[#050219] via-[#5E65EF] to-[#FFB600] rounded-full"
                         initial={{ scaleX: 0 }}
                         animate={inView ? { scaleX: 1 } : {}}
                         transition={{ delay: delay + 0.2, duration: 0.8 }}
@@ -146,24 +148,25 @@ const SponsorCategory: React.FC<SponsorCategoryProps> = ({ category, sponsors, d
                             stiffness: 100
                         }}
                         whileHover={{
-                            y: -8,
-                            boxShadow: '0 10px 25px -5px rgba(99, 102, 241, 0.3)'
+                            y: -12,
+                            scale: 1.07,
+                            boxShadow: '0 16px 40px -8px rgba(99, 102, 241, 0.25)'
                         }}
-                        className={`flex items-center justify-center rounded-xl bg-gradient-to-br from-[#050219] to-blue-950/70 backdrop-blur-sm border border-white/10 hover:border-blue-400/50 transition-all ${getSponsorSize()} hover:bg-white/10`}
+                        className={`flex items-center justify-center rounded-2xl backdrop-blur-md border border-gray-200 shadow-lg hover:shadow-2xl transition-all ${getSponsorSize()}`}
                     >
                         {sponsor.logo ? (
                             <Image
                                 src={sponsor.logo}
                                 alt={sponsor.name}
-                                width={300}
-                                height={150}
-                                className={`object-contain w-full h-auto transition-transform p-2 duration-300 hover:scale-105 ${category.includes('In Partnership') ? 'max-h-20 lg:max-h-32' :
-                                        category.includes('Gold') ? 'max-h-20 lg:max-h-32' :
-                                            category.includes('Media') ? 'max-h-20 lg:max-h-32' : 'max-h-20 lg:max-h-32'
+                                width={500}
+                                height={250}
+                                className={`object-contain w-full h-auto transition-transform p-2 duration-300 hover:scale-110 ${category.includes('In Partnership') ? 'max-h-40 lg:max-h-52' :
+                                        category.includes('Gold') ? 'max-h-36 lg:max-h-48' :
+                                            category.includes('Media') ? 'max-h-32 lg:max-h-40' : 'max-h-32 lg:max-h-40'
                                     }`}
                             />
                         ) : (
-                            <span className="text-white/70">{sponsor.name}</span>
+                            <span className="text-gray-700 text-xl font-semibold">{sponsor.name}</span>
                         )}
                     </motion.a>
                 ))}

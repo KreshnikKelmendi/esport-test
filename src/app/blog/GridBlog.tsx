@@ -243,7 +243,7 @@ const GridBlog = () => {
                         <div className="space-y-6">
                             <div>
                                 <h4 className="text-xs font-britanica text-white uppercase tracking-wider mb-2">VENUE</h4>
-                                <p className="text-white font-britanica-regular">Pristina Olympic Stadium</p>
+                                <p className="text-white font-britanica-regular">1 Tetori Hall, Prishtina, Kosova</p>
                             </div>
 
                             <div>

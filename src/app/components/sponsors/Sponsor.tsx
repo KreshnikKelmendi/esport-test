@@ -10,22 +10,29 @@ const Sponsor = () => {
     "/assets/sponsors/iesf-1.png",
     "/assets/sponsors/esf.png",
     "/assets/sponsors/FESK-1.png",
+    "/assets/sponsors/mkrs.png",
+
   ];
 
   const firstRowLogos = [
-    "/assets/sponsors/sponsor-4.png",
-    "/assets/sponsors/trekuartista-logo.png",
-    "/assets/sponsors/iesf-1.png",
-    "/assets/sponsors/esf.png",
-    "/assets/sponsors/sponsor-1.png",
+    "/assets/sponsors/gold-08.png",
+    "/assets/sponsors/redbull.png",
+    "/assets/sponsors/emerald-hotel.png",
+    "/assets/sponsors/gjirafa.png",
+    "/assets/sponsors/evrotarget.png",
+    "/assets/sponsors/xxl.png",
+    "/assets/sponsors/telkos.png",
+
   ];
 
   const secondRowLogos = [
-   "/assets/sponsors/sponsor-2.png",
-    "/assets/sponsors/trekuartista-logo.png",
-    "/assets/sponsors/iesf-1.png",
-    "/assets/sponsors/esf.png",
-    "/assets/sponsors/exfis.png",
+    "/assets/sponsors/gold-08.png",
+    "/assets/sponsors/redbull.png",
+    "/assets/sponsors/emerald-hotel.png",
+    "/assets/sponsors/gjirafa.png",
+    "/assets/sponsors/evrotarget.png",
+    "/assets/sponsors/xxl.png",
+    "/assets/sponsors/telkos.png",
   ];
 
   const [isMobile, setIsMobile] = useState(false);
@@ -115,18 +122,18 @@ const Sponsor = () => {
               <motion.div 
                 key={`main-${index}`}
                 variants={itemVariants}
-                className="relative h-24 w-24 md:h-32 md:w-32"
+                className="relative h-32 w-32 md:h-40 md:w-40"
                 whileHover={{ scale: 1.05 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <Image
                   src={logo}
                   alt="Main partner logo"
-                  className="w-full h-full object-contain object-center p-2"
+                  className="w-full h-full object-contain object-center p-4"
                   draggable="false"
                   loading="lazy"
-                  width={'300'}
-                  height={'300'}
+                  width={'400'}
+                  height={'400'}
                 />
               </motion.div>
             ))}
@@ -159,19 +166,19 @@ const Sponsor = () => {
                 style={{ width: `${100 / (isMobile ? firstRowLogos.length / 1.5 : firstRowLogos.length)}%` }}
               >
                 <motion.div 
-                  className="relative h-16 w-32 md:h-24 md:w-[250px]"
+                  className="relative h-24 w-48 md:h-32 md:w-[320px]"
                   whileHover={{ scale: 1.01 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-full h-full p-2 lg:p-4 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-full h-full p-4 lg:p-6 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
                     <Image
                       src={logo}
                       alt="Sponsor logo"
-                      className="w-full h-full object-contain object-center"
+                      className="w-full h-full object-cover object-center"
                       draggable="false"
                       loading="lazy"
-                      width={'300'}
-                      height={'300'}
+                      width={'400'}
+                      height={'400'}
                     />
                   </div>
                 </motion.div>
@@ -206,19 +213,19 @@ const Sponsor = () => {
                 style={{ width: `${100 / (isMobile ? secondRowLogos.length / 1.5 : secondRowLogos.length)}%` }}
               >
                 <motion.div 
-                  className="relative h-16 w-32 md:h-24 md:w-[250px]"
+                  className="relative h-24 w-48 md:h-32 md:w-[320px]"
                   whileHover={{ scale: 1.01 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-full h-full p-2 lg:p-4 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-full h-full p-4 lg:p-6 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
                     <Image
                       src={logo}
                       alt="Sponsor logo"
-                      className="w-full h-full object-contain object-center"
+                      className="w-full h-full object-cover object-center"
                       draggable="false"
                       loading="lazy"
-                      width={'300'}
-                      height={'300'}
+                      width={'400'}
+                      height={'400'}
                     />
                   </div>
                 </motion.div>
