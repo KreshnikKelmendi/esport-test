@@ -99,7 +99,7 @@ const Sponsor = () => {
   return (
     <section 
       ref={ref}
-      className="w-full relative pt-6 pb-12 md:pt-32 md:pb-32 overflow-hidden bg-gradient-to-r from-[#0a0829] to-[#050219]"
+      className="w-full relative pt-12 pb-12 md:pt-32 md:pb-32 overflow-hidden bg-gradient-to-r from-[#0a0829] to-[#050219]"
     >
       <div className="mx-auto relative z-10">
         {/* "In Partnership With" section */}
@@ -109,14 +109,14 @@ const Sponsor = () => {
           variants={containerVariants}
           className="text-center mb-12 md:mb-16"
         >
-          <div className="inline-block mb-6">
+          <div className="inline-block ">
             <span className="text-[11px] lg:text-sm font-britanica tracking-widest text-white">IN PARTNERSHIP WITH</span>
             <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-white to-transparent mt-2"></div>
           </div>
           
           <motion.div 
             variants={containerVariants}
-            className="flex justify-center items-center gap-8 md:gap-24 flex-col md:flex-row mt-6"
+            className="flex justify-center items-center gap-2 md:gap-24 flex-col md:flex-row mt-6"
           >
             {mainPartners.map((logo, index) => (
               <motion.div 
@@ -170,11 +170,11 @@ const Sponsor = () => {
                   whileHover={{ scale: 1.01 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-full h-full p-4 lg:p-6 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-full h-full p-0 lg:p-6 rounded-lg backdrop-blur-sm flex items-center justify-center">
                     <Image
                       src={logo}
                       alt="Sponsor logo"
-                      className="w-full h-full object-cover object-center"
+                      className="w-full"
                       draggable="false"
                       loading="lazy"
                       width={'400'}
@@ -217,11 +217,11 @@ const Sponsor = () => {
                   whileHover={{ scale: 1.01 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="w-full h-full p-4 lg:p-6 border border-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center">
+                  <div className="w-full h-full p-0 lg:p-6 rounded-lg backdrop-blur-sm flex items-center justify-center">
                     <Image
                       src={logo}
                       alt="Sponsor logo"
-                      className="w-full h-full object-cover object-center"
+                      className="w-full"
                       draggable="false"
                       loading="lazy"
                       width={'400'}
